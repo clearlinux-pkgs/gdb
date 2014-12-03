@@ -1,0 +1,9 @@
+/usr/share/info/bfd.info
+/usr/share/locale/fi/LC_MESSAGES/opcodes.mo
+/usr/share/locale/fi/LC_MESSAGES/bfd.mo
+/usr/include/bfdlink.h
+/usr/include/bfd.h
+/usr/include/ansidecl.h
+/usr/include/dis-asm.h
+/usr/include/plugin-api.h
+/usr/include/symcat.h

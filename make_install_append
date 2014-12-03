@@ -1,0 +1,2 @@
+rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/bfd.mo
+rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
