@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 8.0
-Release  : 56
+Release  : 57
 URL      : http://ftp.gnu.org/gnu/gdb/gdb-8.0.tar.xz
 Source0  : http://ftp.gnu.org/gnu/gdb/gdb-8.0.tar.xz
 Source99 : http://ftp.gnu.org/gnu/gdb/gdb-8.0.tar.xz.sig
@@ -40,6 +40,7 @@ BuildRequires : texinfo
 BuildRequires : xz-dev
 BuildRequires : zlib-dev
 Patch1: curses.patch
+Patch2: cve-2017-9778.patch
 
 %description
 This directory contains various GNU compilers, assemblers, linkers,
@@ -84,18 +85,23 @@ doc components for the gdb package.
 %prep
 %setup -q -n gdb-8.0
 %patch1 -p1
+%patch2 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1496604760
+export SOURCE_DATE_EPOCH=1503351309
+export CFLAGS="$CFLAGS -fstack-protector-strong "
+export FCFLAGS="$CFLAGS -fstack-protector-strong "
+export FFLAGS="$CFLAGS -fstack-protector-strong "
+export CXXFLAGS="$CXXFLAGS -fstack-protector-strong "
 %configure  --enable-static  --with-separate-debug-dir=/usr/lib/debug --enable-tui --enable-targets=%{_arch}-unknown-linux-gnu,%{_arch}-generic-linux-gnu  --target=%{_arch}-generic-linux-gnu %{_arch}-generic-linux-gnu --with-python=yes --enable-plugins --disable-rpath --with-system-zlib --with-intel-pt PYTHON=/usr/bin/python3 --with-python=/usr/bin/python3
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1496604760
+export SOURCE_DATE_EPOCH=1503351309
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content

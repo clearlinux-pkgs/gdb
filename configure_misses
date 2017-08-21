@@ -1,0 +1,147 @@
+Configure miss: x86_64-generic-linux-gnu-gnatbind
+Configure miss: x86_64-generic-linux-gnu-gnatmake
+Configure miss: isl 0.16, 0.15, or deprecated 0.14
+Configure miss: isl 0.16 or 0.15
+Configure miss: x86_64-generic-linux-gnu-as
+Configure miss: x86_64-generic-linux-gnu-ld
+Configure miss: x86_64-generic-linux-gnu-lipo
+Configure miss: x86_64-generic-linux-gnu-windmc
+Configure miss: x86_64-generic-linux-gnu-objcopy
+Configure miss: x86_64-generic-linux-gnu-readelf
+Configure miss: x86_64-generic-linux-gnu-gccgo
+Configure miss: x86_64-generic-linux-gnu-as
+Configure miss: x86_64-generic-linux-gnu-ld
+Configure miss: x86_64-generic-linux-gnu-lipo
+Configure miss: x86_64-generic-linux-gnu-objcopy
+Configure miss: x86_64-generic-linux-gnu-readelf
+Configure miss: x86_64-generic-linux-gnu-windmc
+Configure miss: whether gcc accepts -g... checking build system type
+Configure miss: whether gcc supports -Wmissing-prototypes
+Configure miss: whether to install libiberty headers and static library... checking whether gcc supports -Wmissing-format-attribute
+Configure miss: memory.h... checking stddef.h usability
+Configure miss: strings.h... checking for sys/types.h
+Configure miss: off_t... checking for memory.h
+Configure miss: ssize_t
+Configure miss: whether gcc supports -pedantic 
+Configure miss: working mmap
+Configure miss: if the linker (ld) is GNU ld
+Configure miss: shared library run path origin... checking for sys/sysmp.h
+Configure miss: sys/sysinfo.h
+Configure miss: nl_types.h presence
+Configure miss: strcasecmp... checking stddef.h usability
+Configure miss: sys/param.h usability
+Configure miss: setenv
+Configure miss: setlocale
+Configure miss: varargs.h
+Configure miss: tsearch
+Configure miss: bcmp
+Configure miss: sys/pte.h
+Configure miss: __argz_stringify
+Configure miss: sys/stream.h presence
+Configure miss: sys/stream.h
+Configure miss: bzero
+Configure miss: iconv declaration
+Configure miss: gettimeofday
+Configure miss: index
+Configure miss: speed_t in sys/types.h
+Configure miss: memmem
+Configure miss: memmove
+Configure miss: mbschr... checking for rindex
+Configure miss: pstat_getstatic
+Configure miss: spawnvpe
+Configure miss: sysmp
+Configure miss: suffix of executables... checking whether we are cross compiling
+Configure miss: gcc option to accept ISO C89... checking for gcc option to accept ISO C89
+Configure miss: whether it is safe to define __EXTENSIONS__
+Configure miss: x86_64-generic-linux-gnu-strip... checking for x86_64-generic-linux-gnu-strip
+Configure miss: if gcc supports -fno-rtti -fno-exceptions... checking if gcc supports -fno-rtti -fno-exceptions
+Configure miss: gcc option to produce PIC
+Configure miss: catalogs to be installed
+Configure miss: sigsetjmp
+Configure miss: gcc version with buggy 64-bit support
+Configure miss: prstatus32_t in sys/procfs.h
+Configure miss: prstatus_t.pr_who in sys/procfs.h
+Configure miss: prstatus32_t.pr_who in sys/procfs.h
+Configure miss: pstatus_t in sys/procfs.h
+Configure miss: pxstatus_t in sys/procfs.h
+Configure miss: pstatus32_t in sys/procfs.h
+Configure miss: prpsinfo32_t in sys/procfs.h
+Configure miss: prpsinfo32_t.pr_pid in sys/procfs.h
+Configure miss: psinfo_t in sys/procfs.h
+Configure miss: psinfo_t.pr_pid in sys/procfs.h
+Configure miss: psinfo32_t in sys/procfs.h
+Configure miss: psinfo32_t.pr_pid in sys/procfs.h
+Configure miss: lwpstatus_t in sys/procfs.h
+Configure miss: lwpxstatus_t in sys/procfs.h
+Configure miss: lwpstatus_t.pr_context in sys/procfs.h
+Configure miss: lwpstatus_t.pr_reg in sys/procfs.h
+Configure miss: lwpstatus_t.pr_fpreg in sys/procfs.h
+Configure miss: win32_pstatus_t in sys/procfs.h
+Configure miss: whether stdint.h predates C++11
+Configure miss: whether the C locale is free of encoding errors
+Configure miss: libunwind-ia64.h usability
+Configure miss: libunwind-ia64.h presence
+Configure miss: libunwind-ia64.h
+Configure miss: library containing kinfo_getvmmap
+Configure miss: usable guile from /usr/bin/pkg-config
+Configure miss: nlist.h usability
+Configure miss: nlist.h presence
+Configure miss: nlist.h
+Configure miss: machine/reg.h usability
+Configure miss: machine/reg.h presence
+Configure miss: machine/reg.h
+Configure miss: sys/fault.h usability
+Configure miss: sys/fault.h presence
+Configure miss: sys/fault.h
+Configure miss: ptrace.h usability
+Configure miss: ptrace.h presence
+Configure miss: ptrace.h
+Configure miss: elf_hp.h usability
+Configure miss: elf_hp.h presence
+Configure miss: elf_hp.h
+Configure miss: sys/proc.h
+Configure miss: cursesX.h usability
+Configure miss: cursesX.h presence
+Configure miss: cursesX.h
+Configure miss: ncurses/ncurses.h usability
+Configure miss: ncurses/ncurses.h presence
+Configure miss: ncurses/ncurses.h
+Configure miss: ncurses/term.h usability
+Configure miss: ncurses/term.h presence
+Configure miss: ncurses/term.h
+Configure miss: ttrace
+Configure miss: libiconvlist
+Configure miss: ptrace64
+Configure miss: struct thread.td_pcb
+Configure miss: struct lwp
+Configure miss: struct reg in machine/reg.h
+Configure miss: struct reg.r_fs
+Configure miss: struct reg.r_gs
+Configure miss: PT_GETDBREGS
+Configure miss: PT_GETXMMREGS
+Configure miss: struct ptrace_lwpinfo.pl_tdname
+Configure miss: struct ptrace_lwpinfo.pl_syscall_code
+Configure miss: gregset_t in sys/procfs.h
+Configure miss: fpregset_t in sys/procfs.h
+Configure miss: prgregset32_t in sys/procfs.h
+Configure miss: prsysent_t in sys/procfs.h
+Configure miss: pr_sigset_t in sys/procfs.h
+Configure miss: pr_sigaction64_t in sys/procfs.h
+Configure miss: pr_siginfo64_t in sys/procfs.h
+Configure miss: whether prfpregset_t type is broken
+Configure miss: decfloat support in printf
+Configure miss: cygwin
+Configure miss: Mach-O support in BFD
+Configure miss: X
+Configure miss: libbabeltrace
+Configure miss: whether stdint.h predates C++11
+Configure miss: whether the C locale is free of encoding errors
+Configure miss: sys/sysmp.h
+Configure miss: sys/table.h
+Configure miss: sys/systemcfg.h
+Configure miss: whether errno must be declared
+Configure miss: pstat_getstatic
+Configure miss: spawnvpe
+Configure miss: sysmp
+Configure miss: ust
+Configure miss: if building for x32
