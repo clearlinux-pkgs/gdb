@@ -15,49 +15,35 @@ Configure miss: x86_64-generic-linux-gnu-lipo
 Configure miss: x86_64-generic-linux-gnu-objcopy
 Configure miss: x86_64-generic-linux-gnu-readelf
 Configure miss: x86_64-generic-linux-gnu-windmc
-Configure miss: whether gcc accepts -g... checking build system type
-Configure miss: whether gcc supports -Wmissing-prototypes
-Configure miss: whether to install libiberty headers and static library... checking whether gcc supports -Wmissing-format-attribute
-Configure miss: memory.h... checking stddef.h usability
-Configure miss: strings.h... checking for sys/types.h
-Configure miss: off_t... checking for memory.h
-Configure miss: ssize_t
-Configure miss: whether gcc supports -pedantic 
-Configure miss: working mmap
-Configure miss: if the linker (ld) is GNU ld
-Configure miss: shared library run path origin... checking for sys/sysmp.h
-Configure miss: sys/sysinfo.h
-Configure miss: nl_types.h presence
-Configure miss: strcasecmp... checking stddef.h usability
-Configure miss: sys/param.h usability
-Configure miss: setenv
-Configure miss: setlocale
+Configure miss: suffix of executables
+Configure miss: ctype.h presence
+Configure miss: strings.h
+Configure miss: stdio.h presence
+Configure miss: size_t
+Configure miss: fcntl
+Configure miss: malloc.h presence
+Configure miss: whether errno must be declared
+Configure miss: pid_t... checking for stpcpy
 Configure miss: varargs.h
-Configure miss: tsearch
-Configure miss: bcmp
+Configure miss: __argz_count
 Configure miss: sys/pte.h
-Configure miss: __argz_stringify
-Configure miss: sys/stream.h presence
+Configure miss: bcopy
 Configure miss: sys/stream.h
-Configure miss: bzero
-Configure miss: iconv declaration
+Configure miss: _FILE_OFFSET_BITS value needed for large files... checking for bzero
+Configure miss: clock
 Configure miss: gettimeofday
-Configure miss: index
-Configure miss: speed_t in sys/types.h
+Configure miss: TIOCSTAT in sys/ioctl.h... checking for insque
+Configure miss: memchr
+Configure miss: memcpy
 Configure miss: memmem
-Configure miss: memmove
-Configure miss: mbschr... checking for rindex
+Configure miss: target system type
 Configure miss: pstat_getstatic
 Configure miss: spawnvpe
 Configure miss: sysmp
-Configure miss: suffix of executables... checking whether we are cross compiling
-Configure miss: gcc option to accept ISO C89... checking for gcc option to accept ISO C89
 Configure miss: whether it is safe to define __EXTENSIONS__
-Configure miss: x86_64-generic-linux-gnu-strip... checking for x86_64-generic-linux-gnu-strip
-Configure miss: if gcc supports -fno-rtti -fno-exceptions... checking if gcc supports -fno-rtti -fno-exceptions
-Configure miss: gcc option to produce PIC
 Configure miss: catalogs to be installed
-Configure miss: sigsetjmp
+Configure miss: whether stpcpy is declared
+Configure miss: cos in -lm
 Configure miss: gcc version with buggy 64-bit support
 Configure miss: prstatus32_t in sys/procfs.h
 Configure miss: prstatus_t.pr_who in sys/procfs.h

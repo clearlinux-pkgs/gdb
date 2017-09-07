@@ -6,11 +6,11 @@
 #
 %define keepstatic 1
 Name     : gdb
-Version  : 8.0
-Release  : 57
-URL      : http://ftp.gnu.org/gnu/gdb/gdb-8.0.tar.xz
-Source0  : http://ftp.gnu.org/gnu/gdb/gdb-8.0.tar.xz
-Source99 : http://ftp.gnu.org/gnu/gdb/gdb-8.0.tar.xz.sig
+Version  : 8.0.1
+Release  : 58
+URL      : http://ftp.gnu.org/gnu/gdb/gdb-8.0.1.tar.xz
+Source0  : http://ftp.gnu.org/gnu/gdb/gdb-8.0.1.tar.xz
+Source99 : http://ftp.gnu.org/gnu/gdb/gdb-8.0.1.tar.xz.sig
 Summary  : zlib compression library
 Group    : Development/Tools
 License  : BSL-1.0 GFDL-1.1 GPL-1.0+ GPL-2.0 GPL-2.0+ GPL-3.0 GPL-3.0+ LGPL-2.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0 Public-Domain
@@ -24,6 +24,7 @@ BuildRequires : expat-dev
 BuildRequires : expect
 BuildRequires : flex
 BuildRequires : gcc-libgcc32
+BuildRequires : gettext
 BuildRequires : glibc-dev32
 BuildRequires : glibc-staticdev
 BuildRequires : go
@@ -83,7 +84,7 @@ doc components for the gdb package.
 
 
 %prep
-%setup -q -n gdb-8.0
+%setup -q -n gdb-8.0.1
 %patch1 -p1
 %patch2 -p1
 
@@ -92,7 +93,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1503351309
+export SOURCE_DATE_EPOCH=1504804969
 export CFLAGS="$CFLAGS -fstack-protector-strong "
 export FCFLAGS="$CFLAGS -fstack-protector-strong "
 export FFLAGS="$CFLAGS -fstack-protector-strong "
@@ -101,7 +102,7 @@ export CXXFLAGS="$CXXFLAGS -fstack-protector-strong "
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1503351309
+export SOURCE_DATE_EPOCH=1504804969
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
