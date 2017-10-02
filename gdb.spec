@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 8.0.1
-Release  : 58
+Release  : 59
 URL      : http://ftp.gnu.org/gnu/gdb/gdb-8.0.1.tar.xz
 Source0  : http://ftp.gnu.org/gnu/gdb/gdb-8.0.1.tar.xz
 Source99 : http://ftp.gnu.org/gnu/gdb/gdb-8.0.1.tar.xz.sig
