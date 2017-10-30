@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 8.0.1
-Release  : 59
+Release  : 60
 URL      : http://ftp.gnu.org/gnu/gdb/gdb-8.0.1.tar.xz
 Source0  : http://ftp.gnu.org/gnu/gdb/gdb-8.0.1.tar.xz
 Source99 : http://ftp.gnu.org/gnu/gdb/gdb-8.0.1.tar.xz.sig
@@ -24,7 +24,6 @@ BuildRequires : expat-dev
 BuildRequires : expect
 BuildRequires : flex
 BuildRequires : gcc-libgcc32
-BuildRequires : gettext
 BuildRequires : glibc-dev32
 BuildRequires : glibc-staticdev
 BuildRequires : go
@@ -93,7 +92,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1504804969
+export SOURCE_DATE_EPOCH=1509386346
 export CFLAGS="$CFLAGS -fstack-protector-strong "
 export FCFLAGS="$CFLAGS -fstack-protector-strong "
 export FFLAGS="$CFLAGS -fstack-protector-strong "
@@ -102,7 +101,7 @@ export CXXFLAGS="$CXXFLAGS -fstack-protector-strong "
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1504804969
+export SOURCE_DATE_EPOCH=1509386346
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -123,73 +122,50 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 %defattr(-,root,root,-)
 /usr/share/gdb/python/gdb/FrameDecorator.py
 /usr/share/gdb/python/gdb/FrameDecorator.pyc
-/usr/share/gdb/python/gdb/FrameDecorator.pyo
 /usr/share/gdb/python/gdb/FrameIterator.py
 /usr/share/gdb/python/gdb/FrameIterator.pyc
-/usr/share/gdb/python/gdb/FrameIterator.pyo
 /usr/share/gdb/python/gdb/__init__.py
 /usr/share/gdb/python/gdb/__init__.pyc
-/usr/share/gdb/python/gdb/__init__.pyo
 /usr/share/gdb/python/gdb/command/__init__.py
 /usr/share/gdb/python/gdb/command/__init__.pyc
-/usr/share/gdb/python/gdb/command/__init__.pyo
 /usr/share/gdb/python/gdb/command/explore.py
 /usr/share/gdb/python/gdb/command/explore.pyc
-/usr/share/gdb/python/gdb/command/explore.pyo
 /usr/share/gdb/python/gdb/command/frame_filters.py
 /usr/share/gdb/python/gdb/command/frame_filters.pyc
-/usr/share/gdb/python/gdb/command/frame_filters.pyo
 /usr/share/gdb/python/gdb/command/pretty_printers.py
 /usr/share/gdb/python/gdb/command/pretty_printers.pyc
-/usr/share/gdb/python/gdb/command/pretty_printers.pyo
 /usr/share/gdb/python/gdb/command/prompt.py
 /usr/share/gdb/python/gdb/command/prompt.pyc
-/usr/share/gdb/python/gdb/command/prompt.pyo
 /usr/share/gdb/python/gdb/command/type_printers.py
 /usr/share/gdb/python/gdb/command/type_printers.pyc
-/usr/share/gdb/python/gdb/command/type_printers.pyo
 /usr/share/gdb/python/gdb/command/unwinders.py
 /usr/share/gdb/python/gdb/command/unwinders.pyc
-/usr/share/gdb/python/gdb/command/unwinders.pyo
 /usr/share/gdb/python/gdb/command/xmethods.py
 /usr/share/gdb/python/gdb/command/xmethods.pyc
-/usr/share/gdb/python/gdb/command/xmethods.pyo
 /usr/share/gdb/python/gdb/frames.py
 /usr/share/gdb/python/gdb/frames.pyc
-/usr/share/gdb/python/gdb/frames.pyo
 /usr/share/gdb/python/gdb/function/__init__.py
 /usr/share/gdb/python/gdb/function/__init__.pyc
-/usr/share/gdb/python/gdb/function/__init__.pyo
 /usr/share/gdb/python/gdb/function/as_string.py
 /usr/share/gdb/python/gdb/function/as_string.pyc
-/usr/share/gdb/python/gdb/function/as_string.pyo
 /usr/share/gdb/python/gdb/function/caller_is.py
 /usr/share/gdb/python/gdb/function/caller_is.pyc
-/usr/share/gdb/python/gdb/function/caller_is.pyo
 /usr/share/gdb/python/gdb/function/strfns.py
 /usr/share/gdb/python/gdb/function/strfns.pyc
-/usr/share/gdb/python/gdb/function/strfns.pyo
 /usr/share/gdb/python/gdb/printer/__init__.py
 /usr/share/gdb/python/gdb/printer/__init__.pyc
-/usr/share/gdb/python/gdb/printer/__init__.pyo
 /usr/share/gdb/python/gdb/printer/bound_registers.py
 /usr/share/gdb/python/gdb/printer/bound_registers.pyc
-/usr/share/gdb/python/gdb/printer/bound_registers.pyo
 /usr/share/gdb/python/gdb/printing.py
 /usr/share/gdb/python/gdb/printing.pyc
-/usr/share/gdb/python/gdb/printing.pyo
 /usr/share/gdb/python/gdb/prompt.py
 /usr/share/gdb/python/gdb/prompt.pyc
-/usr/share/gdb/python/gdb/prompt.pyo
 /usr/share/gdb/python/gdb/types.py
 /usr/share/gdb/python/gdb/types.pyc
-/usr/share/gdb/python/gdb/types.pyo
 /usr/share/gdb/python/gdb/unwinder.py
 /usr/share/gdb/python/gdb/unwinder.pyc
-/usr/share/gdb/python/gdb/unwinder.pyo
 /usr/share/gdb/python/gdb/xmethod.py
 /usr/share/gdb/python/gdb/xmethod.pyc
-/usr/share/gdb/python/gdb/xmethod.pyo
 /usr/share/gdb/syscalls/aarch64-linux.xml
 /usr/share/gdb/syscalls/amd64-linux.xml
 /usr/share/gdb/syscalls/arm-linux.xml
@@ -207,10 +183,8 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 /usr/share/gdb/syscalls/sparc64-linux.xml
 /usr/share/gdb/system-gdbinit/elinos.py
 /usr/share/gdb/system-gdbinit/elinos.pyc
-/usr/share/gdb/system-gdbinit/elinos.pyo
 /usr/share/gdb/system-gdbinit/wrs-linux.py
 /usr/share/gdb/system-gdbinit/wrs-linux.pyc
-/usr/share/gdb/system-gdbinit/wrs-linux.pyo
 
 %files dev
 %defattr(-,root,root,-)
