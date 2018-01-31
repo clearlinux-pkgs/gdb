@@ -6,11 +6,11 @@
 #
 %define keepstatic 1
 Name     : gdb
-Version  : 8.0.1
-Release  : 62
-URL      : http://ftp.gnu.org/gnu/gdb/gdb-8.0.1.tar.xz
-Source0  : http://ftp.gnu.org/gnu/gdb/gdb-8.0.1.tar.xz
-Source99 : http://ftp.gnu.org/gnu/gdb/gdb-8.0.1.tar.xz.sig
+Version  : 8.1
+Release  : 63
+URL      : http://ftp.gnu.org/gnu/gdb/gdb-8.1.tar.xz
+Source0  : http://ftp.gnu.org/gnu/gdb/gdb-8.1.tar.xz
+Source99 : http://ftp.gnu.org/gnu/gdb/gdb-8.1.tar.xz.sig
 Summary  : zlib compression library
 Group    : Development/Tools
 License  : BSL-1.0 GFDL-1.1 GPL-1.0+ GPL-2.0 GPL-2.0+ GPL-3.0 GPL-3.0+ LGPL-2.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0 Public-Domain
@@ -28,6 +28,7 @@ BuildRequires : glibc-dev32
 BuildRequires : glibc-staticdev
 BuildRequires : go
 BuildRequires : libxslt-bin
+BuildRequires : mpfr-dev
 BuildRequires : ncurses-dev
 BuildRequires : pkgconfig(zlib)
 BuildRequires : processor-trace-dev
@@ -39,8 +40,7 @@ BuildRequires : tcl
 BuildRequires : texinfo
 BuildRequires : xz-dev
 BuildRequires : zlib-dev
-Patch1: curses.patch
-Patch2: cve-2017-9778.patch
+Patch1: cve-2017-9778.patch
 
 %description
 This directory contains various GNU compilers, assemblers, linkers,
@@ -83,25 +83,24 @@ doc components for the gdb package.
 
 
 %prep
-%setup -q -n gdb-8.0.1
+%setup -q -n gdb-8.1
 %patch1 -p1
-%patch2 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1509386346
+export SOURCE_DATE_EPOCH=1517412304
 export CFLAGS="$CFLAGS -fstack-protector-strong "
 export FCFLAGS="$CFLAGS -fstack-protector-strong "
 export FFLAGS="$CFLAGS -fstack-protector-strong "
 export CXXFLAGS="$CXXFLAGS -fstack-protector-strong "
 %configure  --enable-static  --with-separate-debug-dir=/usr/lib/debug --enable-tui --enable-targets=%{_arch}-unknown-linux-gnu,%{_arch}-generic-linux-gnu  --target=%{_arch}-generic-linux-gnu %{_arch}-generic-linux-gnu --with-python=yes --enable-plugins --disable-rpath --with-system-zlib --with-intel-pt PYTHON=/usr/bin/python3 --with-python=/usr/bin/python3
-make V=1  %{?_smp_mflags}
+make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1509386346
+export SOURCE_DATE_EPOCH=1517412304
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content

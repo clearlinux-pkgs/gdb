@@ -15,40 +15,35 @@ Configure miss: x86_64-generic-linux-gnu-lipo
 Configure miss: x86_64-generic-linux-gnu-objcopy
 Configure miss: x86_64-generic-linux-gnu-readelf
 Configure miss: x86_64-generic-linux-gnu-windmc
-Configure miss: whether gcc supports -Wold-style-definition
-Configure miss: string.h
-Configure miss: alloca
-Configure miss: inline
-Configure miss: size of int
-Configure miss: whether the inttypes.h PRIxNN macros are broken... checking for sys/resource.h
-Configure miss: argz.h presence
-Configure miss: nl_types.h usability
-Configure miss: malloc.h presence... checking for kill
-Configure miss: stddef.h usability
-Configure miss: memmove
-Configure miss: __argz_stringify
+Configure miss: suffix of object files... checking whether we are cross compiling
+Configure miss: host system type
+Configure miss: stdlib.h... checking for strings.h... checking ctype.h usability
+Configure miss: off_t
+Configure miss: uintptr_t
+Configure miss: working mmap... checking for fcntl
+Configure miss: sys/sysmp.h
+Configure miss: locale.h presence
+Configure miss: malloc.h presence
+Configure miss: ssize_t... checking for setenv
 Configure miss: varargs.h presence
 Configure miss: varargs.h
-Configure miss: LC_MESSAGES
-Configure miss: clock
+Configure miss: basename
+Configure miss: tsearch
 Configure miss: sys/pte.h
-Configure miss: ffs
+Configure miss: __argz_count
+Configure miss: bcopy
 Configure miss: sys/stream.h
+Configure miss: __argz_next
 Configure miss: getpagesize
-Configure miss: index
-Configure miss: memcmp
-Configure miss: memcpy... checking for C compiler default output file name
-Configure miss: memmem... checking whether we are cross compiling
-Configure miss: tgetent... checking for mkstemps
-Configure miss: snprintf
-Configure miss: stpncpy
+Configure miss: memcpy
+Configure miss: memmem
 Configure miss: pstat_getstatic
 Configure miss: spawnvpe
 Configure miss: sysmp
-Configure miss: whether it is safe to define __EXTENSIONS__
-Configure miss: ld used by gcc
-Configure miss: if gcc static flag -static works... checking if gcc supports -fno-rtti -fno-exceptions
+Configure miss: suffix of executables... checking whether we are cross compiling
+Configure miss: a sed that does not truncate output
 Configure miss: catalogs to be installed
+Configure miss: whether string.h and strings.h may both be included
 Configure miss: cos in -lm
 Configure miss: gcc version with buggy 64-bit support
 Configure miss: prstatus32_t in sys/procfs.h
@@ -69,32 +64,33 @@ Configure miss: lwpstatus_t.pr_context in sys/procfs.h
 Configure miss: lwpstatus_t.pr_reg in sys/procfs.h
 Configure miss: lwpstatus_t.pr_fpreg in sys/procfs.h
 Configure miss: win32_pstatus_t in sys/procfs.h
-Configure miss: whether stdint.h predates C++11
-Configure miss: whether the C locale is free of encoding errors
+Configure miss: whether getcwd aborts when 4k < cwd_length < 16k
+Configure miss: whether glob lists broken symlinks
 Configure miss: libunwind-ia64.h usability
 Configure miss: libunwind-ia64.h presence
 Configure miss: libunwind-ia64.h
 Configure miss: library containing kinfo_getvmmap
+Configure miss: libmpfr
 Configure miss: usable guile from /usr/bin/pkg-config
+Configure miss: pt_insn_event
 Configure miss: nlist.h usability
 Configure miss: nlist.h presence
 Configure miss: nlist.h
 Configure miss: machine/reg.h usability
 Configure miss: machine/reg.h presence
 Configure miss: machine/reg.h
-Configure miss: sys/fault.h usability
-Configure miss: sys/fault.h presence
-Configure miss: sys/fault.h
 Configure miss: ptrace.h usability
 Configure miss: ptrace.h presence
 Configure miss: ptrace.h
 Configure miss: elf_hp.h usability
 Configure miss: elf_hp.h presence
 Configure miss: elf_hp.h
-Configure miss: sys/proc.h
 Configure miss: cursesX.h usability
 Configure miss: cursesX.h presence
 Configure miss: cursesX.h
+Configure miss: ncursesw/ncurses.h usability
+Configure miss: ncursesw/ncurses.h presence
+Configure miss: ncursesw/ncurses.h
 Configure miss: ncurses/ncurses.h usability
 Configure miss: ncurses/ncurses.h presence
 Configure miss: ncurses/ncurses.h
@@ -116,18 +112,14 @@ Configure miss: struct ptrace_lwpinfo.pl_syscall_code
 Configure miss: gregset_t in sys/procfs.h
 Configure miss: fpregset_t in sys/procfs.h
 Configure miss: prgregset32_t in sys/procfs.h
-Configure miss: prsysent_t in sys/procfs.h
-Configure miss: pr_sigset_t in sys/procfs.h
-Configure miss: pr_sigaction64_t in sys/procfs.h
-Configure miss: pr_siginfo64_t in sys/procfs.h
 Configure miss: whether prfpregset_t type is broken
 Configure miss: decfloat support in printf
 Configure miss: cygwin
 Configure miss: Mach-O support in BFD
 Configure miss: X
 Configure miss: libbabeltrace
-Configure miss: whether stdint.h predates C++11
-Configure miss: whether the C locale is free of encoding errors
+Configure miss: whether getcwd aborts when 4k < cwd_length < 16k
+Configure miss: whether glob lists broken symlinks
 Configure miss: sys/sysmp.h
 Configure miss: sys/table.h
 Configure miss: sys/systemcfg.h

@@ -7,6 +7,7 @@ ncurses-dev
 binutils-dev
 glibc-staticdev
 python-dev
+python3-dev
 bison
 flex
 texinfo
@@ -19,3 +20,4 @@ glibc-dev32
 gcc-libgcc32
 processor-trace-dev
 python3-dev
+mpfr-dev
