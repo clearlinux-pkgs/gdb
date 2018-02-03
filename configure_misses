@@ -15,35 +15,47 @@ Configure miss: x86_64-generic-linux-gnu-lipo
 Configure miss: x86_64-generic-linux-gnu-objcopy
 Configure miss: x86_64-generic-linux-gnu-readelf
 Configure miss: x86_64-generic-linux-gnu-windmc
-Configure miss: suffix of object files... checking whether we are cross compiling
-Configure miss: host system type
-Configure miss: stdlib.h... checking for strings.h... checking ctype.h usability
-Configure miss: off_t
-Configure miss: uintptr_t
-Configure miss: working mmap... checking for fcntl
-Configure miss: sys/sysmp.h
-Configure miss: locale.h presence
-Configure miss: malloc.h presence
-Configure miss: ssize_t... checking for setenv
-Configure miss: varargs.h presence
+Configure miss: whether make sets $(MAKE)... checking whether make sets $(MAKE)... checking whether to enable maintainer-specific portions of Makefiles
+Configure miss: whether we are cross compiling... checking whether gcc accepts -g
+Configure miss: gcc option to accept ISO C89... checking whether gcc supports -Wmissing-prototypes
+Configure miss: gcc option to accept ISO C89... checking for grep that handles long lines and -e
+Configure miss: string.h... checking stddef.h usability
+Configure miss: memory.h
+Configure miss: size_t
+Configure miss: an ANSI C-conforming const
+Configure miss: select... checking whether the inttypes.h PRIxNN macros are broken
+Configure miss: limits.h usability
+Configure miss: nl_types.h usability
+Configure miss: strcasecmp
+Configure miss: stddef.h presence
+Configure miss: sys/param.h usability
+Configure miss: putenv
+Configure miss: ssize_t
 Configure miss: varargs.h
-Configure miss: basename
-Configure miss: tsearch
+Configure miss: strtoul... checking for basename
 Configure miss: sys/pte.h
-Configure miss: __argz_count
-Configure miss: bcopy
+Configure miss: tsearch... checking for bcmp
+Configure miss: sys/stream.h presence
 Configure miss: sys/stream.h
-Configure miss: __argz_next
-Configure miss: getpagesize
+Configure miss: __argz_stringify... checking for bsearch
+Configure miss: __fsetlocking... checking for calloc
+Configure miss: LC_MESSAGES... checking for getcwd
+Configure miss: GNU gettext in libc... checking for getpagesize
+Configure miss: insque
 Configure miss: memcpy
-Configure miss: memmem
+Configure miss: tgetent in -ltermcap
+Configure miss: mbscasecmp... checking whether we are cross compiling
+Configure miss: suffix of object files
+Configure miss: gcc option to accept ISO C89... checking for mkstemps
+Configure miss: host system type
+Configure miss: rename
 Configure miss: pstat_getstatic
 Configure miss: spawnvpe
 Configure miss: sysmp
-Configure miss: suffix of executables... checking whether we are cross compiling
-Configure miss: a sed that does not truncate output
+Configure miss: whether the C compiler works... checking whether we are cross compiling
+Configure miss: whether it is safe to define __EXTENSIONS__
+Configure miss: if gcc supports -fno-rtti -fno-exceptions... checking if gcc supports -fno-rtti -fno-exceptions
 Configure miss: catalogs to be installed
-Configure miss: whether string.h and strings.h may both be included
 Configure miss: cos in -lm
 Configure miss: gcc version with buggy 64-bit support
 Configure miss: prstatus32_t in sys/procfs.h
