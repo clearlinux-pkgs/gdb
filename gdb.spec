@@ -7,10 +7,10 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 8.1
-Release  : 65
-URL      : http://ftp.gnu.org/gnu/gdb/gdb-8.1.tar.xz
-Source0  : http://ftp.gnu.org/gnu/gdb/gdb-8.1.tar.xz
-Source99 : http://ftp.gnu.org/gnu/gdb/gdb-8.1.tar.xz.sig
+Release  : 66
+URL      : https://mirrors.kernel.org/gnu/gdb/gdb-8.1.tar.xz
+Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-8.1.tar.xz
+Source99 : https://mirrors.kernel.org/gnu/gdb/gdb-8.1.tar.xz.sig
 Summary  : zlib compression library
 Group    : Development/Tools
 License  : BSL-1.0 GFDL-1.1 GPL-1.0+ GPL-2.0 GPL-2.0+ GPL-3.0 GPL-3.0+ LGPL-2.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0 Public-Domain
@@ -39,7 +39,6 @@ BuildRequires : sed
 BuildRequires : tcl
 BuildRequires : texinfo
 BuildRequires : xz-dev
-BuildRequires : zlib-dev
 Patch1: cve-2017-9778.patch
 
 %description
@@ -91,16 +90,16 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1517682953
-export CFLAGS="$CFLAGS -fstack-protector-strong "
-export FCFLAGS="$CFLAGS -fstack-protector-strong "
-export FFLAGS="$CFLAGS -fstack-protector-strong "
-export CXXFLAGS="$CXXFLAGS -fstack-protector-strong "
+export SOURCE_DATE_EPOCH=1520914172
+export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
+export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
+export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
+export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
 %configure  --enable-static  --with-separate-debug-dir=/usr/lib/debug --enable-tui --enable-targets=%{_arch}-unknown-linux-gnu,%{_arch}-generic-linux-gnu  --target=%{_arch}-generic-linux-gnu %{_arch}-generic-linux-gnu --with-python=yes --enable-plugins --disable-rpath --with-system-zlib --with-intel-pt PYTHON=/usr/bin/python3 --with-python=/usr/bin/python3
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1517682953
+export SOURCE_DATE_EPOCH=1520914172
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content

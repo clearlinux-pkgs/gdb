@@ -15,48 +15,43 @@ Configure miss: x86_64-generic-linux-gnu-lipo
 Configure miss: x86_64-generic-linux-gnu-objcopy
 Configure miss: x86_64-generic-linux-gnu-readelf
 Configure miss: x86_64-generic-linux-gnu-windmc
-Configure miss: whether make sets $(MAKE)... checking whether make sets $(MAKE)... checking whether to enable maintainer-specific portions of Makefiles
-Configure miss: whether we are cross compiling... checking whether gcc accepts -g
-Configure miss: gcc option to accept ISO C89... checking whether gcc supports -Wmissing-prototypes
-Configure miss: gcc option to accept ISO C89... checking for grep that handles long lines and -e
-Configure miss: string.h... checking stddef.h usability
-Configure miss: memory.h
-Configure miss: size_t
-Configure miss: an ANSI C-conforming const
-Configure miss: select... checking whether the inttypes.h PRIxNN macros are broken
-Configure miss: limits.h usability
-Configure miss: nl_types.h usability
-Configure miss: strcasecmp
-Configure miss: stddef.h presence
-Configure miss: sys/param.h usability
-Configure miss: putenv
-Configure miss: ssize_t
-Configure miss: varargs.h
-Configure miss: strtoul... checking for basename
-Configure miss: sys/pte.h
-Configure miss: tsearch... checking for bcmp
-Configure miss: sys/stream.h presence
-Configure miss: sys/stream.h
-Configure miss: __argz_stringify... checking for bsearch
-Configure miss: __fsetlocking... checking for calloc
-Configure miss: LC_MESSAGES... checking for getcwd
-Configure miss: GNU gettext in libc... checking for getpagesize
-Configure miss: insque
-Configure miss: memcpy
-Configure miss: tgetent in -ltermcap
-Configure miss: mbscasecmp... checking whether we are cross compiling
-Configure miss: suffix of object files
-Configure miss: gcc option to accept ISO C89... checking for mkstemps
+Configure miss: C compiler default output file name... checking whether we are cross compiling
+Configure miss: C compiler default output file name... checking whether gcc supports -W
+Configure miss: suffix of executables
+Configure miss: sys/types.h
+Configure miss: strings.h... checking for stdint.h
+Configure miss: unistd.h... checking for stdint.h
+Configure miss: size_t... checking ctype.h usability
+Configure miss: _FILE_OFFSET_BITS value needed for large files... checking stddef.h usability
+Configure miss: inttypes.h... checking for lstat
 Configure miss: host system type
-Configure miss: rename
+Configure miss: stddef.h usability
+Configure miss: isxdigit
+Configure miss: a 64-bit type
+Configure miss: varargs.h
+Configure miss: atexit
+Configure miss: sys/pte.h
+Configure miss: sys/stream.h presence... checking for bcmp
+Configure miss: sys/stream.h
+Configure miss: calloc
+Configure miss: LC_MESSAGES
+Configure miss: getcwd
+Configure miss: index
+Configure miss: insque
+Configure miss: whether termios.h defines TIOCGWINSZ... checking for memchr
+Configure miss: memmem
+Configure miss: whether we are using the GNU C compiler
+Configure miss: mbscmp... checking for strcasecmp
+Configure miss: strncasecmp
 Configure miss: pstat_getstatic
 Configure miss: spawnvpe
 Configure miss: sysmp
-Configure miss: whether the C compiler works... checking whether we are cross compiling
-Configure miss: whether it is safe to define __EXTENSIONS__
-Configure miss: if gcc supports -fno-rtti -fno-exceptions... checking if gcc supports -fno-rtti -fno-exceptions
+Configure miss: whether we are using the GNU C compiler... checking whether we are cross compiling
+Configure miss: stdint.h
+Configure miss: command to parse gcc-nm output from gcc object
+Configure miss: if gcc supports -fno-rtti -fno-exceptions... checking for dlfcn.h
 Configure miss: catalogs to be installed
-Configure miss: cos in -lm
+Configure miss: limits.h usability
 Configure miss: gcc version with buggy 64-bit support
 Configure miss: prstatus32_t in sys/procfs.h
 Configure miss: prstatus_t.pr_who in sys/procfs.h
@@ -77,7 +72,7 @@ Configure miss: lwpstatus_t.pr_reg in sys/procfs.h
 Configure miss: lwpstatus_t.pr_fpreg in sys/procfs.h
 Configure miss: win32_pstatus_t in sys/procfs.h
 Configure miss: whether getcwd aborts when 4k < cwd_length < 16k
-Configure miss: whether glob lists broken symlinks
+Configure miss: GNU glob interface version 1
 Configure miss: libunwind-ia64.h usability
 Configure miss: libunwind-ia64.h presence
 Configure miss: libunwind-ia64.h
@@ -131,7 +126,7 @@ Configure miss: Mach-O support in BFD
 Configure miss: X
 Configure miss: libbabeltrace
 Configure miss: whether getcwd aborts when 4k < cwd_length < 16k
-Configure miss: whether glob lists broken symlinks
+Configure miss: GNU glob interface version 1
 Configure miss: sys/sysmp.h
 Configure miss: sys/table.h
 Configure miss: sys/systemcfg.h

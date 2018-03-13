@@ -7,6 +7,7 @@ adwaita-icon-theme
 aeon
 babl
 bash_kernel
+beignet
 cargo
 ceph
 cheese
@@ -14,6 +15,7 @@ compat-libpng-soname12
 compat-opencv-soname32
 compat-opencv-soname33
 faba-icon-theme
+filesystem
 gdk-pixbuf
 gedit
 gensim
@@ -32,6 +34,8 @@ jupyter_client
 libmediaart
 libpng
 librsvg
+libvirt
+mariadb
 matplotlib
 moka-icon-theme
 mutt
@@ -40,13 +44,16 @@ numba
 numpy
 opencv
 pandas
+pciutils
 proc-macro2
 pyzmq
 rustc
 scikit-image
 scikit-learn
 scipy
-spyder
+shadow
+sysstat
+systemd
 tensorflow
 tflearn
 totem
