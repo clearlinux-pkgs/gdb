@@ -2,6 +2,7 @@
 Cython
 Keras
 PyWavelets
+R-fastcluster
 Theano
 adwaita-icon-theme
 aeon
@@ -11,6 +12,7 @@ beignet
 cargo
 ceph
 cheese
+clr-init
 compat-libpng-soname12
 compat-opencv-soname32
 compat-opencv-soname33
@@ -21,6 +23,7 @@ gedit
 gensim
 gevent
 gimp
+gnome-photos
 gst-plugins-good
 gtk+
 h5py
@@ -31,10 +34,13 @@ ipython-sql
 jupyter
 jupyter-notebook-gist
 jupyter_client
+jupyterlab
+jupyterlab_launcher
 libmediaart
 libpng
 librsvg
 libvirt
+linux-oracle
 mariadb
 matplotlib
 moka-icon-theme
@@ -52,10 +58,12 @@ scikit-image
 scikit-learn
 scipy
 shadow
+spice-gtk
 sysstat
 systemd
 tensorflow
 tflearn
 totem
 unicode-xid
+virt-viewer
 websockify

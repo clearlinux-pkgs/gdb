@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 8.1
-Release  : 68
+Release  : 69
 URL      : https://mirrors.kernel.org/gnu/gdb/gdb-8.1.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-8.1.tar.xz
 Source99 : https://mirrors.kernel.org/gnu/gdb/gdb-8.1.tar.xz.sig
@@ -90,16 +90,16 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1520914172
-export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
-export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
-export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
-export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
+export SOURCE_DATE_EPOCH=1526167451
+export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 %configure  --enable-static  --with-separate-debug-dir=/usr/lib/debug --enable-tui --enable-targets=%{_arch}-unknown-linux-gnu,%{_arch}-generic-linux-gnu  --target=%{_arch}-generic-linux-gnu %{_arch}-generic-linux-gnu --with-python=yes --enable-plugins --disable-rpath --with-system-zlib --with-intel-pt PYTHON=/usr/bin/python3 --with-python=/usr/bin/python3
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1520914172
+export SOURCE_DATE_EPOCH=1526167451
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
