@@ -33,7 +33,7 @@ BuildRequires : ncurses-dev
 BuildRequires : pkgconfig(zlib)
 BuildRequires : processor-trace-dev
 BuildRequires : procps-ng
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : sed
 BuildRequires : tcl
