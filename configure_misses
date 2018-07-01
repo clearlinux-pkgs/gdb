@@ -16,40 +16,41 @@ Configure miss: x86_64-generic-linux-gnu-objcopy
 Configure miss: x86_64-generic-linux-gnu-readelf
 Configure miss: x86_64-generic-linux-gnu-windmc
 Configure miss: whether make sets $(MAKE)... checking whether to enable maintainer-specific portions of Makefiles
-Configure miss: whether we are using the GNU C compiler... checking whether we are cross compiling
-Configure miss: whether to install libiberty headers and static library... checking whether gcc accepts -g
-Configure miss: gcc option to accept ISO C89... checking for sys/stat.h
-Configure miss: int_least32_t
-Configure miss: ssize_t
-Configure miss: size of int
-Configure miss: whether the inttypes.h PRIxNN macros are broken... checking for sys/resource.h
-Configure miss: locale.h usability
-Configure miss: malloc.h presence
-Configure miss: feof_unlocked
-Configure miss: setenv
-Configure miss: ssize_t
+Configure miss: whether gcc supports -Wall
+Configure miss: string.h... checking for inttypes.h... checking for strings.h
+Configure miss: unistd.h... checking whether gcc needs -traditional... checking for stdint.h
+Configure miss: unistd.h
+Configure miss: return type of signal handlers
+Configure miss: working mmap
+Configure miss: malloc.h usability
+Configure miss: sys/sysmp.h
+Configure miss: stddef.h usability... checking for sys/table.h
+Configure miss: isascii... checking for process.h
+Configure miss: fgets_unlocked... checking for getpwent
+Configure miss: size of long long
+Configure miss: mempcpy
 Configure miss: varargs.h
-Configure miss: atexit... checking for strtoul
-Configure miss: basename... checking for tsearch
+Configure miss: sys/pte.h presence... checking for tsearch
 Configure miss: sys/pte.h
-Configure miss: bcmp... checking for __argz_count
-Configure miss: sys/stream.h presence
+Configure miss: __argz_count
+Configure miss: atexit
 Configure miss: sys/stream.h
-Configure miss: __argz_next... checking for bsearch
-Configure miss: calloc
-Configure miss: GNU gettext in libc... checking for getcwd
-Configure miss: gettimeofday... checking whether termios.h defines TIOCGWINSZ
-Configure miss: tgetent... checking for memcmp
+Configure miss: __fsetlocking
+Configure miss: bcopy
+Configure miss: nl_langinfo and CODESET
+Configure miss: clock... checking whether included gettext is requested
+Configure miss: getcwd
+Configure miss: TIOCSTAT in sys/ioctl.h... checking for index
+Configure miss: speed_t in sys/types.h... checking for insque
 Configure miss: memcpy
-Configure miss: gcc option to accept ISO C89... checking for memset
-Configure miss: build system type
+Configure miss: wchar.h presence
+Configure miss: putenv
 Configure miss: pstat_getstatic
 Configure miss: spawnvpe
 Configure miss: sysmp
-Configure miss: how to print strings
+Configure miss: whether it is safe to define __EXTENSIONS__
 Configure miss: whether gcc supports -Wmissing-field-initializers
 Configure miss: catalogs to be installed
-Configure miss: cos in -lm
 Configure miss: gcc version with buggy 64-bit support
 Configure miss: prstatus32_t in sys/procfs.h
 Configure miss: prstatus_t.pr_who in sys/procfs.h
@@ -76,6 +77,7 @@ Configure miss: libunwind-ia64.h presence
 Configure miss: libunwind-ia64.h
 Configure miss: library containing kinfo_getvmmap
 Configure miss: libmpfr
+Configure miss: whether to use python
 Configure miss: usable guile from /usr/bin/pkg-config
 Configure miss: pt_insn_event
 Configure miss: nlist.h usability

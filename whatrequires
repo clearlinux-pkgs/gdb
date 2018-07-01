@@ -1,7 +1,12 @@
 # This file contains recursive sources that require this package
+Cheetah
 Cython
 Keras
+Keras_Applications
+Keras_Preprocessing
+Markdown
 PyWavelets
+PyYAML
 R-fastcluster
 Theano
 adwaita-icon-theme
@@ -39,6 +44,7 @@ jupyterlab_launcher
 libmediaart
 libpng
 librsvg
+libstoragemgmt
 libvirt
 linux-oracle
 mariadb
@@ -52,6 +58,7 @@ opencv
 pandas
 pciutils
 proc-macro2
+pyaml
 pyzmq
 rustc
 scikit-image
