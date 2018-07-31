@@ -6,11 +6,11 @@
 #
 %define keepstatic 1
 Name     : gdb
-Version  : 8.1
-Release  : 72
-URL      : https://mirrors.kernel.org/gnu/gdb/gdb-8.1.tar.xz
-Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-8.1.tar.xz
-Source99 : https://mirrors.kernel.org/gnu/gdb/gdb-8.1.tar.xz.sig
+Version  : 8.1.1
+Release  : 73
+URL      : https://mirrors.kernel.org/gnu/gdb/gdb-8.1.1.tar.xz
+Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-8.1.1.tar.xz
+Source99 : https://mirrors.kernel.org/gnu/gdb/gdb-8.1.1.tar.xz.sig
 Summary  : zlib compression library
 Group    : Development/Tools
 License  : BSL-1.0 GFDL-1.1 GPL-1.0+ GPL-2.0 GPL-2.0+ GPL-3.0 GPL-3.0+ LGPL-2.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0 Public-Domain
@@ -20,6 +20,7 @@ Requires: gdb-data
 Requires: gdb-man
 BuildRequires : binutils-dev
 BuildRequires : bison
+BuildRequires : buildreq-golang
 BuildRequires : dejagnu
 BuildRequires : expat-dev
 BuildRequires : expect
@@ -27,8 +28,8 @@ BuildRequires : flex
 BuildRequires : gcc-libgcc32
 BuildRequires : gfortran
 BuildRequires : glibc-dev32
+BuildRequires : glibc-locale
 BuildRequires : glibc-staticdev
-BuildRequires : go
 BuildRequires : libxslt-bin
 BuildRequires : mpfr-dev
 BuildRequires : ncurses-dev
@@ -103,7 +104,7 @@ man components for the gdb package.
 
 
 %prep
-%setup -q -n gdb-8.1
+%setup -q -n gdb-8.1.1
 %patch1 -p1
 
 %build
@@ -111,7 +112,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1530463774
+export SOURCE_DATE_EPOCH=1533060750
 export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
@@ -120,29 +121,29 @@ export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs=use
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1530463774
+export SOURCE_DATE_EPOCH=1533060750
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/gdb
 cp COPYING %{buildroot}/usr/share/doc/gdb/COPYING
-cp COPYING3 %{buildroot}/usr/share/doc/gdb/COPYING3
 cp COPYING.LIB %{buildroot}/usr/share/doc/gdb/COPYING.LIB
+cp COPYING3 %{buildroot}/usr/share/doc/gdb/COPYING3
 cp COPYING3.LIB %{buildroot}/usr/share/doc/gdb/COPYING3.LIB
 cp bfd/COPYING %{buildroot}/usr/share/doc/gdb/bfd_COPYING
-cp readline/COPYING %{buildroot}/usr/share/doc/gdb/readline_COPYING
 cp gdb/COPYING %{buildroot}/usr/share/doc/gdb/gdb_COPYING
-cp zlib/contrib/dotzlib/LICENSE_1_0.txt %{buildroot}/usr/share/doc/gdb/zlib_contrib_dotzlib_LICENSE_1_0.txt
-cp sim/ppc/COPYING %{buildroot}/usr/share/doc/gdb/sim_ppc_COPYING
-cp sim/ppc/COPYING.LIB %{buildroot}/usr/share/doc/gdb/sim_ppc_COPYING.LIB
-cp sim/arm/COPYING %{buildroot}/usr/share/doc/gdb/sim_arm_COPYING
 cp include/COPYING %{buildroot}/usr/share/doc/gdb/include_COPYING
 cp include/COPYING3 %{buildroot}/usr/share/doc/gdb/include_COPYING3
-cp libiberty/copying-lib.texi %{buildroot}/usr/share/doc/gdb/libiberty_copying-lib.texi
 cp libiberty/COPYING.LIB %{buildroot}/usr/share/doc/gdb/libiberty_COPYING.LIB
+cp libiberty/copying-lib.texi %{buildroot}/usr/share/doc/gdb/libiberty_copying-lib.texi
+cp readline/COPYING %{buildroot}/usr/share/doc/gdb/readline_COPYING
+cp sim/arm/COPYING %{buildroot}/usr/share/doc/gdb/sim_arm_COPYING
+cp sim/ppc/COPYING %{buildroot}/usr/share/doc/gdb/sim_ppc_COPYING
+cp sim/ppc/COPYING.LIB %{buildroot}/usr/share/doc/gdb/sim_ppc_COPYING.LIB
+cp zlib/contrib/dotzlib/LICENSE_1_0.txt %{buildroot}/usr/share/doc/gdb/zlib_contrib_dotzlib_LICENSE_1_0.txt
 %make_install
-## make_install_append content
+## install_append content
 rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/bfd.mo
 rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
-## make_install_append end
+## install_append end
 
 %files
 %defattr(-,root,root,-)
