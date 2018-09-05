@@ -2,7 +2,7 @@ ld-linux-x86-64.so.2
 libc.so.6
 libdl.so.2
 libexpat.so.1
-libipt.so.1
+libipt.so.2
 liblzma.so.5
 libm.so.6
 libncursesw.so.6

@@ -6,11 +6,11 @@
 #
 %define keepstatic 1
 Name     : gdb
-Version  : 8.1.1
-Release  : 74
-URL      : https://mirrors.kernel.org/gnu/gdb/gdb-8.1.1.tar.xz
-Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-8.1.1.tar.xz
-Source99 : https://mirrors.kernel.org/gnu/gdb/gdb-8.1.1.tar.xz.sig
+Version  : 8.2
+Release  : 75
+URL      : https://mirrors.kernel.org/gnu/gdb/gdb-8.2.tar.xz
+Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-8.2.tar.xz
+Source99 : https://mirrors.kernel.org/gnu/gdb/gdb-8.2.tar.xz.sig
 Summary  : zlib compression library
 Group    : Development/Tools
 License  : BSL-1.0 GFDL-1.1 GPL-1.0+ GPL-2.0 GPL-2.0+ GPL-3.0 GPL-3.0+ LGPL-2.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0 Public-Domain
@@ -26,6 +26,7 @@ BuildRequires : expat-dev
 BuildRequires : expect
 BuildRequires : flex
 BuildRequires : gcc-libgcc32
+BuildRequires : gettext
 BuildRequires : gfortran
 BuildRequires : glibc-dev32
 BuildRequires : glibc-locale
@@ -104,7 +105,7 @@ man components for the gdb package.
 
 
 %prep
-%setup -q -n gdb-8.1.1
+%setup -q -n gdb-8.2
 %patch1 -p1
 
 %build
@@ -112,7 +113,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1533060750
+export SOURCE_DATE_EPOCH=1536145148
 export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
@@ -121,7 +122,7 @@ export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs=use
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1533060750
+export SOURCE_DATE_EPOCH=1536145148
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/gdb
 cp COPYING %{buildroot}/usr/share/doc/gdb/COPYING
@@ -152,6 +153,7 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 %defattr(-,root,root,-)
 /usr/bin/gcore
 /usr/bin/gdb
+/usr/bin/gdb-add-index
 /usr/bin/gdbserver
 
 %files data
@@ -182,6 +184,7 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 %exclude /usr/include/dis-asm.h
 %exclude /usr/include/plugin-api.h
 %exclude /usr/include/symcat.h
+/usr/include/*.h
 /usr/include/gdb/jit-reader.h
 /usr/lib64/*.a
 /usr/lib64/libinproctrace.so
@@ -212,6 +215,7 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 %files man
 %defattr(-,root,root,-)
 /usr/share/man/man1/gcore.1
+/usr/share/man/man1/gdb-add-index.1
 /usr/share/man/man1/gdb.1
 /usr/share/man/man1/gdbserver.1
 /usr/share/man/man5/gdbinit.5

@@ -1,7 +1,6 @@
 Configure miss: x86_64-generic-linux-gnu-gnatbind
 Configure miss: x86_64-generic-linux-gnu-gnatmake
-Configure miss: isl 0.16, 0.15, or deprecated 0.14
-Configure miss: isl 0.16 or 0.15
+Configure miss: isl 0.15 or later
 Configure miss: x86_64-generic-linux-gnu-as
 Configure miss: x86_64-generic-linux-gnu-ld
 Configure miss: x86_64-generic-linux-gnu-lipo
@@ -15,41 +14,46 @@ Configure miss: x86_64-generic-linux-gnu-lipo
 Configure miss: x86_64-generic-linux-gnu-objcopy
 Configure miss: x86_64-generic-linux-gnu-readelf
 Configure miss: x86_64-generic-linux-gnu-windmc
-Configure miss: whether gcc supports -Wstrict-prototypes... checking for gcc option to accept ISO C89
-Configure miss: gcc option to accept ISO C89... checking for stdlib.h
-Configure miss: sys/types.h
-Configure miss: ctype.h presence... checking for sys/stat.h
-Configure miss: string.h... checking for off_t
-Configure miss: ssize_t
-Configure miss: size of int
-Configure miss: limits.h presence... checking for alloca.h
-Configure miss: locale.h presence
-Configure miss: nl_types.h usability... checking for setlocale
-Configure miss: malloc.h presence
-Configure miss: strcasecmp... checking stddef.h usability
-Configure miss: process.h... checking for feof_unlocked
-Configure miss: setenv
-Configure miss: ssize_t
+Configure miss: suffix of object files
+Configure miss: whether gcc supports -W
+Configure miss: whether gcc supports -Wstrict-prototypes
+Configure miss: string.h... checking for sys/stat.h
+Configure miss: gcc option to accept ISO C89... checking for strings.h... checking for string.h
+Configure miss: unistd.h
+Configure miss: stddef.h presence
+Configure miss: build system type
+Configure miss: int_least32_t
+Configure miss: int_fast32_t
+Configure miss: lstat
+Configure miss: shared library run path origin
+Configure miss: argz.h usability
+Configure miss: limits.h presence
+Configure miss: locale.h usability
+Configure miss: stddef.h presence
+Configure miss: feof_unlocked
+Configure miss: munmap
+Configure miss: varargs.h presence
 Configure miss: varargs.h
-Configure miss: strtoul... checking for atexit
-Configure miss: sys/pte.h
-Configure miss: bcmp... checking for __argz_count
-Configure miss: sys/stream.h presence
+Configure miss: atexit
+Configure miss: sys/pte.h... checking for strdup
+Configure miss: strtoul
+Configure miss: bcmp
 Configure miss: sys/stream.h
-Configure miss: __argz_next
-Configure miss: _FILE_OFFSET_BITS value needed for large files... checking for bsearch
-Configure miss: calloc
-Configure miss: GNU gettext in libc... checking for getcwd
-Configure miss: getpagesize
-Configure miss: gettimeofday
-Configure miss: memcmp
-Configure miss: memcpy
-Configure miss: gcc option to accept ISO C89... checking for memset
-Configure miss: random
+Configure miss: _FILE_OFFSET_BITS value needed for large files... checking for __argz_next
+Configure miss: index
+Configure miss: GNU gettext in libc
+Configure miss: TIOCSTAT in sys/ioctl.h... checking for memcmp
+Configure miss: memmove
+Configure miss: suffix of executables
+Configure miss: mbsnrtowcs
 Configure miss: pstat_getstatic
 Configure miss: spawnvpe
 Configure miss: sysmp
+Configure miss: whether we are cross compiling... checking whether we are cross compiling
+Configure miss: whether gcc understands -c and -o together
+Configure miss: minix/config.h usability... checking minix/config.h usability
 Configure miss: whether it is safe to define __EXTENSIONS__
+Configure miss: x86_64-generic-linux-gnu-strip... checking for x86_64-generic-linux-gnu-objdump
 Configure miss: if gcc supports -fno-rtti -fno-exceptions... checking if gcc supports -fno-rtti -fno-exceptions
 Configure miss: if gcc PIC flag -fPIC -DPIC works
 Configure miss: catalogs to be installed
@@ -78,10 +82,12 @@ Configure miss: libunwind-ia64.h usability
 Configure miss: libunwind-ia64.h presence
 Configure miss: libunwind-ia64.h
 Configure miss: library containing kinfo_getvmmap
+Configure miss: library containing kinfo_getfile
 Configure miss: libmpfr
 Configure miss: whether to use python
 Configure miss: usable guile from /usr/bin/pkg-config
-Configure miss: pt_insn_event
+Configure miss: struct pt_insn.enabled
+Configure miss: struct pt_insn.resynced
 Configure miss: nlist.h usability
 Configure miss: nlist.h presence
 Configure miss: nlist.h
