@@ -7,3 +7,4 @@
 /usr/include/dis-asm.h
 /usr/include/plugin-api.h
 /usr/include/symcat.h
+/usr/include/diagnostics.h

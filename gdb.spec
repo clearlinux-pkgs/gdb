@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 8.2
-Release  : 75
+Release  : 76
 URL      : https://mirrors.kernel.org/gnu/gdb/gdb-8.2.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-8.2.tar.xz
 Source99 : https://mirrors.kernel.org/gnu/gdb/gdb-8.2.tar.xz.sig
@@ -113,7 +113,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536145148
+export SOURCE_DATE_EPOCH=1536245038
 export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
@@ -122,7 +122,7 @@ export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs=use
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1536145148
+export SOURCE_DATE_EPOCH=1536245038
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/gdb
 cp COPYING %{buildroot}/usr/share/doc/gdb/COPYING
@@ -181,10 +181,10 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 %exclude /usr/include/ansidecl.h
 %exclude /usr/include/bfd.h
 %exclude /usr/include/bfdlink.h
+%exclude /usr/include/diagnostics.h
 %exclude /usr/include/dis-asm.h
 %exclude /usr/include/plugin-api.h
 %exclude /usr/include/symcat.h
-/usr/include/*.h
 /usr/include/gdb/jit-reader.h
 /usr/lib64/*.a
 /usr/lib64/libinproctrace.so
