@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 8.2
-Release  : 104
+Release  : 105
 URL      : https://mirrors.kernel.org/gnu/gdb/gdb-8.2.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-8.2.tar.xz
 Source99 : https://mirrors.kernel.org/gnu/gdb/gdb-8.2.tar.xz.sig
@@ -52,9 +52,9 @@ debuggers, etc., plus their support routines, definitions, and documentation.
 %package bin
 Summary: bin components for the gdb package.
 Group: Binaries
-Requires: gdb-data
-Requires: gdb-license
-Requires: gdb-man
+Requires: gdb-data = %{version}-%{release}
+Requires: gdb-license = %{version}-%{release}
+Requires: gdb-man = %{version}-%{release}
 
 %description bin
 bin components for the gdb package.
@@ -71,9 +71,9 @@ data components for the gdb package.
 %package dev
 Summary: dev components for the gdb package.
 Group: Development
-Requires: gdb-bin
-Requires: gdb-data
-Provides: gdb-devel
+Requires: gdb-bin = %{version}-%{release}
+Requires: gdb-data = %{version}-%{release}
+Provides: gdb-devel = %{version}-%{release}
 
 %description dev
 dev components for the gdb package.
@@ -82,7 +82,7 @@ dev components for the gdb package.
 %package doc
 Summary: doc components for the gdb package.
 Group: Documentation
-Requires: gdb-man
+Requires: gdb-man = %{version}-%{release}
 
 %description doc
 doc components for the gdb package.
@@ -113,16 +113,16 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536245038
+export SOURCE_DATE_EPOCH=1539106974
 export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-%configure  --enable-static  --with-separate-debug-dir=/usr/lib/debug --enable-tui --enable-targets=%{_arch}-unknown-linux-gnu,%{_arch}-generic-linux-gnu  --target=%{_arch}-generic-linux-gnu %{_arch}-generic-linux-gnu --with-python=no --enable-plugins --disable-rpath --with-system-zlib --with-intel-pt PYTHON=/usr/bin/python3 --with-python=no
+%configure  --enable-static  --with-separate-debug-dir=/usr/lib/debug --enable-tui --enable-targets=%{_arch}-unknown-linux-gnu,%{_arch}-generic-linux-gnu  --target=%{_arch}-generic-linux-gnu %{_arch}-generic-linux-gnu --with-python=yes --enable-plugins --disable-rpath --with-system-zlib --with-intel-pt PYTHON=/usr/bin/python3 --with-python=yes
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1536245038
+export SOURCE_DATE_EPOCH=1539106974
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/gdb
 cp COPYING %{buildroot}/usr/share/doc/gdb/COPYING
@@ -158,6 +158,29 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/gdb/python/gdb/FrameDecorator.py
+/usr/share/gdb/python/gdb/FrameIterator.py
+/usr/share/gdb/python/gdb/__init__.py
+/usr/share/gdb/python/gdb/command/__init__.py
+/usr/share/gdb/python/gdb/command/explore.py
+/usr/share/gdb/python/gdb/command/frame_filters.py
+/usr/share/gdb/python/gdb/command/pretty_printers.py
+/usr/share/gdb/python/gdb/command/prompt.py
+/usr/share/gdb/python/gdb/command/type_printers.py
+/usr/share/gdb/python/gdb/command/unwinders.py
+/usr/share/gdb/python/gdb/command/xmethods.py
+/usr/share/gdb/python/gdb/frames.py
+/usr/share/gdb/python/gdb/function/__init__.py
+/usr/share/gdb/python/gdb/function/as_string.py
+/usr/share/gdb/python/gdb/function/caller_is.py
+/usr/share/gdb/python/gdb/function/strfns.py
+/usr/share/gdb/python/gdb/printer/__init__.py
+/usr/share/gdb/python/gdb/printer/bound_registers.py
+/usr/share/gdb/python/gdb/printing.py
+/usr/share/gdb/python/gdb/prompt.py
+/usr/share/gdb/python/gdb/types.py
+/usr/share/gdb/python/gdb/unwinder.py
+/usr/share/gdb/python/gdb/xmethod.py
 /usr/share/gdb/syscalls/aarch64-linux.xml
 /usr/share/gdb/syscalls/amd64-linux.xml
 /usr/share/gdb/syscalls/arm-linux.xml
@@ -191,12 +214,12 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 
 %files doc
 %defattr(0644,root,root,0755)
-%doc /usr/share/doc/gdb/*
 %doc /usr/share/info/*
 %exclude /usr/share/info/bfd.info
+/usr/share/doc/gdb/libiberty_copying-lib.texi
 
 %files license
-%defattr(-,root,root,-)
+%defattr(0644,root,root,0755)
 /usr/share/doc/gdb/COPYING
 /usr/share/doc/gdb/COPYING.LIB
 /usr/share/doc/gdb/COPYING3
@@ -213,7 +236,7 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 /usr/share/doc/gdb/zlib_contrib_dotzlib_LICENSE_1_0.txt
 
 %files man
-%defattr(-,root,root,-)
+%defattr(0644,root,root,0755)
 /usr/share/man/man1/gcore.1
 /usr/share/man/man1/gdb-add-index.1
 /usr/share/man/man1/gdb.1
