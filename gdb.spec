@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 8.2
-Release  : 119
+Release  : 120
 URL      : https://mirrors.kernel.org/gnu/gdb/gdb-8.2.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-8.2.tar.xz
 Source99 : https://mirrors.kernel.org/gnu/gdb/gdb-8.2.tar.xz.sig
