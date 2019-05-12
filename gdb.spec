@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 8.3
-Release  : 195
+Release  : 196
 URL      : https://mirrors.kernel.org/gnu/gdb/gdb-8.3.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-8.3.tar.xz
 Source99 : https://mirrors.kernel.org/gnu/gdb/gdb-8.3.tar.xz.sig
@@ -131,7 +131,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1557621253
+export SOURCE_DATE_EPOCH=1557629859
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
@@ -143,7 +143,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -f
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1557621253
+export SOURCE_DATE_EPOCH=1557629859
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gdb
 cp COPYING %{buildroot}/usr/share/package-licenses/gdb/COPYING
@@ -155,6 +155,7 @@ cp gdb/COPYING %{buildroot}/usr/share/package-licenses/gdb/gdb_COPYING
 cp include/COPYING %{buildroot}/usr/share/package-licenses/gdb/include_COPYING
 cp include/COPYING3 %{buildroot}/usr/share/package-licenses/gdb/include_COPYING3
 cp libiberty/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/libiberty_COPYING.LIB
+cp libiberty/copying-lib.texi %{buildroot}/usr/share/package-licenses/gdb/libiberty_copying-lib.texi
 cp readline/COPYING %{buildroot}/usr/share/package-licenses/gdb/readline_COPYING
 cp sim/arm/COPYING %{buildroot}/usr/share/package-licenses/gdb/sim_arm_COPYING
 cp sim/ppc/COPYING %{buildroot}/usr/share/package-licenses/gdb/sim_ppc_COPYING
@@ -223,12 +224,12 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 %defattr(-,root,root,-)
 %exclude /usr/include/ansidecl.h
 %exclude /usr/include/bfd.h
+%exclude /usr/include/bfd_stdint.h
 %exclude /usr/include/bfdlink.h
 %exclude /usr/include/diagnostics.h
 %exclude /usr/include/dis-asm.h
 %exclude /usr/include/plugin-api.h
 %exclude /usr/include/symcat.h
-/usr/include/*.h
 /usr/include/gdb/jit-reader.h
 /usr/lib64/libinproctrace.so
 
@@ -248,6 +249,7 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 /usr/share/package-licenses/gdb/include_COPYING
 /usr/share/package-licenses/gdb/include_COPYING3
 /usr/share/package-licenses/gdb/libiberty_COPYING.LIB
+/usr/share/package-licenses/gdb/libiberty_copying-lib.texi
 /usr/share/package-licenses/gdb/readline_COPYING
 /usr/share/package-licenses/gdb/sim_arm_COPYING
 /usr/share/package-licenses/gdb/sim_ppc_COPYING

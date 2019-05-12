@@ -8,3 +8,4 @@
 /usr/include/plugin-api.h
 /usr/include/symcat.h
 /usr/include/diagnostics.h
+/usr/include/bfd_stdint.h
