@@ -6,12 +6,12 @@
 #
 %define keepstatic 1
 Name     : gdb
-Version  : 8.2.1
-Release  : 194
-URL      : https://mirrors.kernel.org/gnu/gdb/gdb-8.2.1.tar.xz
-Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-8.2.1.tar.xz
-Source99 : https://mirrors.kernel.org/gnu/gdb/gdb-8.2.1.tar.xz.sig
-Summary  : zlib compression library
+Version  : 8.3
+Release  : 195
+URL      : https://mirrors.kernel.org/gnu/gdb/gdb-8.3.tar.xz
+Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-8.3.tar.xz
+Source99 : https://mirrors.kernel.org/gnu/gdb/gdb-8.3.tar.xz.sig
+Summary  : The GNU Debugger
 Group    : Development/Tools
 License  : BSL-1.0 GFDL-1.1 GPL-1.0+ GPL-2.0 GPL-2.0+ GPL-3.0 GPL-3.0+ LGPL-2.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0 Public-Domain
 Requires: gdb-bin = %{version}-%{release}
@@ -26,6 +26,7 @@ BuildRequires : expat-dev
 BuildRequires : expect
 BuildRequires : flex
 BuildRequires : gcc-libgcc32
+BuildRequires : gettext
 BuildRequires : gfortran
 BuildRequires : glibc-dev32
 BuildRequires : glibc-locale
@@ -45,15 +46,21 @@ BuildRequires : xz-dev
 Patch1: cve-2017-9778.patch
 
 %description
-This directory contains various GNU compilers, assemblers, linkers,
-debuggers, etc., plus their support routines, definitions, and documentation.
+Introduction
+============
+This is the Gnu Readline library, version 6.2.
+The Readline library provides a set of functions for use by applications
+that allow users to edit command lines as they are typed in.  Both
+Emacs and vi editing modes are available.  The Readline library includes
+additional functions to maintain a list of previously-entered command
+lines, to recall and perhaps reedit those lines, and perform csh-like
+history expansion on previous commands.
 
 %package bin
 Summary: bin components for the gdb package.
 Group: Binaries
 Requires: gdb-data = %{version}-%{release}
 Requires: gdb-license = %{version}-%{release}
-Requires: gdb-man = %{version}-%{release}
 
 %description bin
 bin components for the gdb package.
@@ -73,6 +80,8 @@ Group: Development
 Requires: gdb-bin = %{version}-%{release}
 Requires: gdb-data = %{version}-%{release}
 Provides: gdb-devel = %{version}-%{release}
+Requires: gdb = %{version}-%{release}
+Requires: gdb = %{version}-%{release}
 
 %description dev
 dev components for the gdb package.
@@ -103,8 +112,18 @@ Group: Default
 man components for the gdb package.
 
 
+%package staticdev
+Summary: staticdev components for the gdb package.
+Group: Default
+Requires: gdb-dev = %{version}-%{release}
+Requires: gdb-dev = %{version}-%{release}
+
+%description staticdev
+staticdev components for the gdb package.
+
+
 %prep
-%setup -q -n gdb-8.2.1
+%setup -q -n gdb-8.3
 %patch1 -p1
 
 %build
@@ -112,16 +131,19 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1546253783
-export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export SOURCE_DATE_EPOCH=1557621253
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
+export FCFLAGS="$CFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
+export FFLAGS="$CFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
+export CXXFLAGS="$CXXFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
 %configure  --enable-static  --with-separate-debug-dir=/usr/lib/debug --enable-tui --enable-targets=%{_arch}-unknown-linux-gnu,%{_arch}-generic-linux-gnu  --target=%{_arch}-generic-linux-gnu %{_arch}-generic-linux-gnu --with-python=yes --enable-plugins --disable-rpath --with-system-zlib --with-intel-pt PYTHON=/usr/bin/python3 --with-python=yes
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1546253783
+export SOURCE_DATE_EPOCH=1557621253
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gdb
 cp COPYING %{buildroot}/usr/share/package-licenses/gdb/COPYING
@@ -133,7 +155,6 @@ cp gdb/COPYING %{buildroot}/usr/share/package-licenses/gdb/gdb_COPYING
 cp include/COPYING %{buildroot}/usr/share/package-licenses/gdb/include_COPYING
 cp include/COPYING3 %{buildroot}/usr/share/package-licenses/gdb/include_COPYING3
 cp libiberty/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/libiberty_COPYING.LIB
-cp libiberty/copying-lib.texi %{buildroot}/usr/share/package-licenses/gdb/libiberty_copying-lib.texi
 cp readline/COPYING %{buildroot}/usr/share/package-licenses/gdb/readline_COPYING
 cp sim/arm/COPYING %{buildroot}/usr/share/package-licenses/gdb/sim_arm_COPYING
 cp sim/ppc/COPYING %{buildroot}/usr/share/package-licenses/gdb/sim_ppc_COPYING
@@ -207,8 +228,8 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 %exclude /usr/include/dis-asm.h
 %exclude /usr/include/plugin-api.h
 %exclude /usr/include/symcat.h
+/usr/include/*.h
 /usr/include/gdb/jit-reader.h
-/usr/lib64/*.a
 /usr/lib64/libinproctrace.so
 
 %files doc
@@ -227,7 +248,6 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 /usr/share/package-licenses/gdb/include_COPYING
 /usr/share/package-licenses/gdb/include_COPYING3
 /usr/share/package-licenses/gdb/libiberty_COPYING.LIB
-/usr/share/package-licenses/gdb/libiberty_copying-lib.texi
 /usr/share/package-licenses/gdb/readline_COPYING
 /usr/share/package-licenses/gdb/sim_arm_COPYING
 /usr/share/package-licenses/gdb/sim_ppc_COPYING
@@ -241,3 +261,8 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 /usr/share/man/man1/gdb.1
 /usr/share/man/man1/gdbserver.1
 /usr/share/man/man5/gdbinit.5
+
+%files staticdev
+%defattr(-,root,root,-)
+/usr/lib64/libbfd.a
+/usr/lib64/libopcodes.a

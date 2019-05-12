@@ -1,9 +1,10 @@
 # This file contains recursive sources that require this package
 Cython
 compat-libpng-soname12
+deprecated-Cython
 libpng
 libreoffice
 mutt
-rustc
 samba
 shadow
+spice
