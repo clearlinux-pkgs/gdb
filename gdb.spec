@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 8.3
-Release  : 213
+Release  : 214
 URL      : https://mirrors.kernel.org/gnu/gdb/gdb-8.3.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-8.3.tar.xz
 Source99 : https://mirrors.kernel.org/gnu/gdb/gdb-8.3.tar.xz.sig
