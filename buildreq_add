@@ -6,7 +6,6 @@ xz-dev
 ncurses-dev
 binutils-dev
 glibc-staticdev
-python-dev
 python3-dev
 bison
 flex
