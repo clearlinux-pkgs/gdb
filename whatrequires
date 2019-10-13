@@ -2,7 +2,6 @@
 Cython
 acrn-hypervisor
 compat-libpng-soname12
-deprecated-Cython
 libpng
 libreoffice
 mutt
