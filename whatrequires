@@ -4,7 +4,6 @@ acrn-hypervisor
 compat-libpng-soname12
 libpng
 libreoffice
-mutt
 samba
 shadow
 spice

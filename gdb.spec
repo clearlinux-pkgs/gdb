@@ -6,12 +6,12 @@
 #
 %define keepstatic 1
 Name     : gdb
-Version  : 8.3.1
-Release  : 247
-URL      : https://mirrors.kernel.org/gnu/gdb/gdb-8.3.1.tar.xz
-Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-8.3.1.tar.xz
-Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-8.3.1.tar.xz.sig
-Summary  : The GNU Debugger
+Version  : 10.1
+Release  : 248
+URL      : https://mirrors.kernel.org/gnu/gdb/gdb-10.1.tar.xz
+Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-10.1.tar.xz
+Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-10.1.tar.xz.sig
+Summary  : zlib compression library
 Group    : Development/Tools
 License  : BSL-1.0 GFDL-1.1 GPL-1.0+ GPL-2.0 GPL-2.0+ GPL-3.0 GPL-3.0+ LGPL-2.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0 Public-Domain
 Requires: gdb-bin = %{version}-%{release}
@@ -19,6 +19,7 @@ Requires: gdb-data = %{version}-%{release}
 Requires: gdb-info = %{version}-%{release}
 Requires: gdb-license = %{version}-%{release}
 Requires: gdb-man = %{version}-%{release}
+BuildRequires : autoconf
 BuildRequires : binutils-dev
 BuildRequires : bison
 BuildRequires : buildreq-golang
@@ -43,18 +44,10 @@ BuildRequires : sed
 BuildRequires : tcl
 BuildRequires : texinfo
 BuildRequires : xz-dev
-Patch1: cve-2017-9778.patch
 
 %description
-Introduction
-============
-This is the Gnu Readline library, version 6.2.
-The Readline library provides a set of functions for use by applications
-that allow users to edit command lines as they are typed in.  Both
-Emacs and vi editing modes are available.  The Readline library includes
-additional functions to maintain a list of previously-entered command
-lines, to recall and perhaps reedit those lines, and perform csh-like
-history expansion on previous commands.
+This directory contains various GNU compilers, assemblers, linkers,
+debuggers, etc., plus their support routines, definitions, and documentation.
 
 %package bin
 Summary: bin components for the gdb package.
@@ -80,7 +73,6 @@ Group: Development
 Requires: gdb-bin = %{version}-%{release}
 Requires: gdb-data = %{version}-%{release}
 Provides: gdb-devel = %{version}-%{release}
-Requires: gdb = %{version}-%{release}
 Requires: gdb = %{version}-%{release}
 
 %description dev
@@ -115,54 +107,51 @@ man components for the gdb package.
 Summary: staticdev components for the gdb package.
 Group: Default
 Requires: gdb-dev = %{version}-%{release}
-Requires: gdb-dev = %{version}-%{release}
 
 %description staticdev
 staticdev components for the gdb package.
 
 
 %prep
-%setup -q -n gdb-8.3.1
-cd %{_builddir}/gdb-8.3.1
-%patch1 -p1
+%setup -q -n gdb-10.1
+cd %{_builddir}/gdb-10.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1576512731
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1603809170
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
-export FCFLAGS="$CFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
-export FFLAGS="$CFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
-export CXXFLAGS="$CXXFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
 %configure  --enable-static  --with-separate-debug-dir=/usr/lib/debug --enable-tui --enable-targets=%{_arch}-unknown-linux-gnu,%{_arch}-generic-linux-gnu  --target=%{_arch}-generic-linux-gnu %{_arch}-generic-linux-gnu --with-python=yes --enable-plugins --disable-rpath --with-system-zlib --with-intel-pt PYTHON=/usr/bin/python3 --with-python=yes
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1576512731
+export SOURCE_DATE_EPOCH=1603809170
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gdb
-cp %{_builddir}/gdb-8.3.1/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
-cp %{_builddir}/gdb-8.3.1/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/0e8e850b0580fbaaa0872326cb1b8ad6adda9b0d
-cp %{_builddir}/gdb-8.3.1/COPYING3 %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-8.3.1/COPYING3.LIB %{buildroot}/usr/share/package-licenses/gdb/e7d563f52bf5295e6dba1d67ac23e9f6a160fab9
-cp %{_builddir}/gdb-8.3.1/bfd/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-8.3.1/gdb/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-8.3.1/include/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
-cp %{_builddir}/gdb-8.3.1/include/COPYING3 %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-8.3.1/libiberty/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/597bf5f9c0904bd6c48ac3a3527685818d11246d
-cp %{_builddir}/gdb-8.3.1/libiberty/copying-lib.texi %{buildroot}/usr/share/package-licenses/gdb/cdb23577fa4523cc88845280fd5223270ddb645a
-cp %{_builddir}/gdb-8.3.1/readline/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-8.3.1/sim/arm/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-8.3.1/sim/ppc/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-8.3.1/sim/ppc/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/5fb362ef1680e635fe5fb212b55eef4db9ead48f
-cp %{_builddir}/gdb-8.3.1/zlib/contrib/dotzlib/LICENSE_1_0.txt %{buildroot}/usr/share/package-licenses/gdb/892b34f7865d90a6f949f50d95e49625a10bc7f0
+cp %{_builddir}/gdb-10.1/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
+cp %{_builddir}/gdb-10.1/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/0e8e850b0580fbaaa0872326cb1b8ad6adda9b0d
+cp %{_builddir}/gdb-10.1/COPYING3 %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-10.1/COPYING3.LIB %{buildroot}/usr/share/package-licenses/gdb/e7d563f52bf5295e6dba1d67ac23e9f6a160fab9
+cp %{_builddir}/gdb-10.1/bfd/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-10.1/gdb/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-10.1/include/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
+cp %{_builddir}/gdb-10.1/include/COPYING3 %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-10.1/libiberty/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/597bf5f9c0904bd6c48ac3a3527685818d11246d
+cp %{_builddir}/gdb-10.1/libiberty/copying-lib.texi %{buildroot}/usr/share/package-licenses/gdb/79747e6fe064f75103cb65ef01a06c650c39994e
+cp %{_builddir}/gdb-10.1/readline/readline/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-10.1/sim/arm/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-10.1/sim/ppc/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-10.1/sim/ppc/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/5fb362ef1680e635fe5fb212b55eef4db9ead48f
+cp %{_builddir}/gdb-10.1/zlib/contrib/dotzlib/LICENSE_1_0.txt %{buildroot}/usr/share/package-licenses/gdb/892b34f7865d90a6f949f50d95e49625a10bc7f0
 %make_install
 ## Remove excluded files
 rm -f %{buildroot}/usr/share/info/bfd.info
@@ -225,6 +214,7 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 /usr/share/gdb/syscalls/mips-n32-linux.xml
 /usr/share/gdb/syscalls/mips-n64-linux.xml
 /usr/share/gdb/syscalls/mips-o32-linux.xml
+/usr/share/gdb/syscalls/netbsd.xml
 /usr/share/gdb/syscalls/ppc-linux.xml
 /usr/share/gdb/syscalls/ppc64-linux.xml
 /usr/share/gdb/syscalls/s390-linux.xml
@@ -236,6 +226,8 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 
 %files dev
 %defattr(-,root,root,-)
+/usr/include/ctf-api.h
+/usr/include/ctf.h
 /usr/include/gdb/jit-reader.h
 /usr/lib64/libinproctrace.so
 
@@ -259,9 +251,9 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 /usr/share/package-licenses/gdb/597bf5f9c0904bd6c48ac3a3527685818d11246d
 /usr/share/package-licenses/gdb/5fb362ef1680e635fe5fb212b55eef4db9ead48f
 /usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
+/usr/share/package-licenses/gdb/79747e6fe064f75103cb65ef01a06c650c39994e
 /usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
 /usr/share/package-licenses/gdb/892b34f7865d90a6f949f50d95e49625a10bc7f0
-/usr/share/package-licenses/gdb/cdb23577fa4523cc88845280fd5223270ddb645a
 /usr/share/package-licenses/gdb/e7d563f52bf5295e6dba1d67ac23e9f6a160fab9
 
 %files man
@@ -275,4 +267,6 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 %files staticdev
 %defattr(-,root,root,-)
 /usr/lib64/libbfd.a
+/usr/lib64/libctf-nobfd.a
+/usr/lib64/libctf.a
 /usr/lib64/libopcodes.a
