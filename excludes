@@ -9,3 +9,5 @@
 /usr/include/symcat.h
 /usr/include/diagnostics.h
 /usr/include/bfd_stdint.h
+/usr/include/ctf-api.h
+/usr/include/ctf.h

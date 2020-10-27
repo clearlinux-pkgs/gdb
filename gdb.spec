@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 10.1
-Release  : 248
+Release  : 249
 URL      : https://mirrors.kernel.org/gnu/gdb/gdb-10.1.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-10.1.tar.xz
 Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-10.1.tar.xz.sig
@@ -121,7 +121,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1603809170
+export SOURCE_DATE_EPOCH=1603811379
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -134,7 +134,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-stron
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1603809170
+export SOURCE_DATE_EPOCH=1603811379
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gdb
 cp %{_builddir}/gdb-10.1/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
@@ -165,6 +165,8 @@ rm -f %{buildroot}/usr/include/plugin-api.h
 rm -f %{buildroot}/usr/include/symcat.h
 rm -f %{buildroot}/usr/include/diagnostics.h
 rm -f %{buildroot}/usr/include/bfd_stdint.h
+rm -f %{buildroot}/usr/include/ctf-api.h
+rm -f %{buildroot}/usr/include/ctf.h
 ## install_append content
 rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/bfd.mo
 rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
@@ -226,8 +228,6 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/ctf-api.h
-/usr/include/ctf.h
 /usr/include/gdb/jit-reader.h
 /usr/lib64/libinproctrace.so
 
