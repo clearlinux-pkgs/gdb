@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 10.1
-Release  : 267
+Release  : 268
 URL      : https://mirrors.kernel.org/gnu/gdb/gdb-10.1.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-10.1.tar.xz
 Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-10.1.tar.xz.sig
