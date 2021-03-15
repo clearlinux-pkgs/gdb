@@ -8,7 +8,7 @@ liblzma.so.5
 libm.so.6
 libncursesw.so.6
 libpthread.so.0
-libpython3.8.so.1.0
 libstdc++.so.6
 libtinfow.so.6
+libutil.so.1
 libz.so.1
