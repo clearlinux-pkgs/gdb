@@ -18,32 +18,32 @@ Configure miss: x86_64-generic-linux-gnu-readelf
 Configure miss: windres
 Configure miss: x86_64-generic-linux-gnu-windmc
 Configure miss: windmc
-Configure miss: whether we are cross compiling... checking whether the C compiler works
+Configure miss: whether build environment is sane... checking whether make sets $(MAKE)... checking whether to enable maintainer-specific portions of Makefiles
+Configure miss: whether the C compiler works... checking whether to enable maintainer-specific portions of Makefiles
+Configure miss: whether we are cross compiling... checking whether we are cross compiling... checking whether the C compiler works
 Configure miss: suffix of object files
-Configure miss: whether we are using the GNU C compiler
-Configure miss: whether the compiler is clang... checking whether gcc supports -Wall
+Configure miss: whether gcc supports -W... checking for suffix of executables
 Configure miss: compiler option needed when checking for declarations
-Configure miss: sys/stat.h... checking for sys/types.h
-Configure miss: strings.h
-Configure miss: inttypes.h
-Configure miss: stdint.h... checking whether make sets $(MAKE)
-Configure miss: off_t
-Configure miss: int_least32_t
-Configure miss: uint64_t
-Configure miss: size of int
-Configure miss: fcntl.h
-Configure miss: sys/mman.h
+Configure miss: minix/config.h presence... checking for inttypes.h
+Configure miss: unistd.h
+Configure miss: uintptr_t
+Configure miss: whether gcc and cc understand -c and -o together
+Configure miss: alloca
+Configure miss: alloca.h
+Configure miss: sys/pstat.h... checking for sys/mman.h
 Configure miss: unsigned long long... checking for sys/uio.h
-Configure miss: inttypes.h... checking for wctype.h
-Configure miss: shared library run path origin
-Configure miss: argz.h usability
-Configure miss: limits.h presence
-Configure miss: whether errno must be declared... checking nl_types.h usability
-Configure miss: feof_unlocked... checking size of long
-Configure miss: gcc option to accept ISO C89... checking for getcwd
-Configure miss: intptr_t
-Configure miss: getgid... checking for fcntl
-Configure miss: varargs.h usability
+Configure miss: sys/table.h
+Configure miss: sys/systemcfg.h... checking whether the preprocessor supports include_next
+Configure miss: shared library run path origin... checking build system type
+Configure miss: whether the C compiler works
+Configure miss: locale.h presence
+Configure miss: canonicalize_file_name... checking for feof_unlocked
+Configure miss: size of size_t
+Configure miss: uintptr_t
+Configure miss: fcntl... checking for getgid
+Configure miss: ssize_t
+Configure miss: rename
+Configure miss: varargs.h presence... checking for catgets
 Configure miss: varargs.h
 Configure miss: iswcntrl... checking for sigsetmask
 Configure miss: sys/pte.h presence
@@ -51,112 +51,101 @@ Configure miss: sys/pte.h
 Configure miss: stpcpy... checking for wmempcpy
 Configure miss: sys/stream.h presence
 Configure miss: sys/stream.h
-Configure miss: nl_langinfo and CODESET... checking for sys/ptem.h... checking for stpncpy
+Configure miss: sys/ptem.h
 Configure miss: strchr
 Configure miss: whether realpath works
 Configure miss: strndup
-Configure miss: strnlen
-Configure miss: strrchr
-Configure miss: TIOCSTAT in sys/ioctl.h
 Configure miss: strtod
-Configure miss: strtol
-Configure miss: libaudit.h presence
+Configure miss: speed_t in sys/types.h
+Configure miss: libaudit.h usability
 Configure miss: libaudit.h
-Configure miss: strtoul
 Configure miss: strtoll
-Configure miss: mbstr.h usability... checking for strverscmp
-Configure miss: mbstr.h presence
+Configure miss: tgetent in -ltermcap
+Configure miss: mbstr.h presence... checking for tmpnam
 Configure miss: mbstr.h
-Configure miss: vasprintf
 Configure miss: vfprintf
 Configure miss: vsprintf
-Configure miss: pid_t
+Configure miss: wcsdup
 Configure miss: whether frexp() can be used without linking with libm
-Configure miss: whether long double and double are the same... checking for iswlower
+Configure miss: iswlower
 Configure miss: iswupper
-Configure miss: whether wint_t is too small... checking for pstat_getdynamic
-Configure miss: whether stdint.h conforms to C99
+Configure miss: iswctype
 Configure miss: whether stdint.h has UINTMAX_WIDTH etc.
 Configure miss: sbrk
-Configure miss: whether imported symbols can be declared weak... checking for spawnve
+Configure miss: GNU libc compatible malloc
 Configure miss: sysconf
 Configure miss: sysmp
 Configure miss: inline
 Configure miss: MAP_ANONYMOUS
 Configure miss: whether calloc is declared
 Configure miss: sigset_t
-Configure miss: strerror_r with POSIX signature
 Configure miss: d_type member in directory struct
-Configure miss: suffix of object files
+Configure miss: gcc option to accept ISO C89... checking for gcc option to accept ISO C89
 Configure miss: whether gcc understands -c and -o together
-Configure miss: whether make sets $(MAKE)... checking for a thread-safe mkdir -p
+Configure miss: whether make sets $(MAKE)
 Configure miss: whether fdopendir works
-Configure miss: minix/config.h presence... checking minix/config.h presence
 Configure miss: whether it is safe to define __EXTENSIONS__
+Configure miss: x86_64-generic-linux-gnu-strip... checking for x86_64-generic-linux-gnu-strip
 Configure miss: whether fstatat (..., 0) works... checking if gcc supports -fno-rtti -fno-exceptions... checking if gcc supports -fno-rtti -fno-exceptions
-Configure miss: if gcc supports -c -o file.o
 Configure miss: catalogs to be installed
 Configure miss: getpagesize
 Configure miss: whether getcwd aborts when 4k < cwd_length < 16k
 Configure miss: limits.h presence
-Configure miss: library containing dlsym
 Configure miss: stddef.h presence
-Configure miss: fcntl
 Configure miss: setitimer
 Configure miss: mkdtemp
-Configure miss: whether rename honors trailing slash on destination... checking for gcc version with buggy 64-bit support
+Configure miss: gcc version with buggy 64-bit support
 Configure miss: whether rename honors trailing slash on source
 Configure miss: prstatus_t.pr_who in sys/procfs.h
-Configure miss: prstatus32_t.pr_who in sys/procfs.h
 Configure miss: whether rename manages hard links correctly
+Configure miss: pstatus_t in sys/procfs.h
 Configure miss: pxstatus_t in sys/procfs.h
-Configure miss: pstatus32_t in sys/procfs.h
+Configure miss: whether rename manages existing destinations correctly
 Configure miss: prpsinfo32_t in sys/procfs.h
-Configure miss: prpsinfo32_t.pr_pid in sys/procfs.h
 Configure miss: rewinddir
+Configure miss: psinfo_t in sys/procfs.h
 Configure miss: psinfo_t.pr_pid in sys/procfs.h
 Configure miss: whether rmdir works
 Configure miss: psinfo32_t.pr_pid in sys/procfs.h
-Configure miss: lwpstatus_t in sys/procfs.h
 Configure miss: whether setenv validates arguments
+Configure miss: lwpxstatus_t in sys/procfs.h
 Configure miss: lwpstatus_t.pr_context in sys/procfs.h
 Configure miss: volatile sig_atomic_t
-Configure miss: lwpstatus_t.pr_fpreg in sys/procfs.h
 Configure miss: sighandler_t
-Configure miss: struct stat.st_birthtimensec... checking for fseeko64
+Configure miss: win32_pstatus_t in sys/procfs.h
+Configure miss: struct stat.st_birthtimespec.tv_nsec... checking for fseeko
+Configure miss: fseeko64
 Configure miss: fopen64
-Configure miss: suffix of executables
-Configure miss: library containing dlsym
-Configure miss: build system type
+Configure miss: whether the C compiler works
+Configure miss: minix/config.h presence... checking minix/config.h usability
 Configure miss: size_t
-Configure miss: ANSI C header files... checking for sys/param.h
-Configure miss: whether strtol is declared
-Configure miss: whether strtoul is declared
-Configure miss: working mmap
-Configure miss: termios.h presence
-Configure miss: ELF support in BFD
-Configure miss: vfork.h presence... checking for pipe
-Configure miss: sigaction
-Configure miss: byteswap.h presence
+Configure miss: gcc option to accept ISO C89... checking for sys/param.h
+Configure miss: sys/select.h presence
+Configure miss: if gcc static flag -static works... checking for getpagesize
+Configure miss: sys/socket.h usability... checking for special C compiler options needed for large files
+Configure miss: fdwalk... checking for working mmap
+Configure miss: pipe
+Configure miss: ptrace64... checking for getrlimit
 Configure miss: setpgrp
 Configure miss: pthread_setname_np
 Configure miss: pthread_sigmask
 Configure miss: struct pt_insn.resynced
-Configure miss: gregset_t in sys/procfs.h
+Configure miss: gregset_t in sys/procfs.h... checking for pthread_setname_np
 Configure miss: fpregset_t in sys/procfs.h
-Configure miss: libipt
-Configure miss: sys/ioctl.h presence
-Configure miss: arpa/inet.h presence
+Configure miss: netinet/in.h presence
+Configure miss: netinet/tcp.h presence
 Configure miss: ws2tcpip.h usability
+Configure miss: fpregset_t in sys/procfs.h
+Configure miss: prgregset_t in sys/procfs.h
 Configure miss: prgregset32_t in sys/procfs.h
-Configure miss: ws2tcpip.h presence
 Configure miss: ws2tcpip.h
-Configure miss: pwrite
-Configure miss: ptrace.h presence
+Configure miss: pread
+Configure miss: pwrite... checking ptrace.h usability
 Configure miss: ptrace.h
 Configure miss: ptrace.h usability
 Configure miss: ptrace.h presence
 Configure miss: ptrace.h
+Configure miss: ust
 Configure miss: if building for x32
 Configure miss: the dynamic export flag
 Configure miss: libdebuginfod >= 0.179
