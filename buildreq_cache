@@ -4,3 +4,4 @@ gettext
 gfortran
 glibc-locale
 libxslt-bin
+util-linux

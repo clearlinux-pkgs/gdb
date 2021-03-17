@@ -1,209 +1,214 @@
-Configure miss: x86_64-generic-linux-gnu-gnatbind
-Configure miss: x86_64-generic-linux-gnu-gnatmake
-Configure miss: isl 0.15 or later
-Configure miss: x86_64-generic-linux-gnu-as
-Configure miss: x86_64-generic-linux-gnu-ld
-Configure miss: x86_64-generic-linux-gnu-lipo
-Configure miss: windres
-Configure miss: x86_64-generic-linux-gnu-windmc
-Configure miss: windmc
-Configure miss: x86_64-generic-linux-gnu-objcopy
-Configure miss: x86_64-generic-linux-gnu-readelf
-Configure miss: x86_64-generic-linux-gnu-gccgo
-Configure miss: x86_64-generic-linux-gnu-as
-Configure miss: x86_64-generic-linux-gnu-ld
-Configure miss: x86_64-generic-linux-gnu-lipo
-Configure miss: x86_64-generic-linux-gnu-objcopy
-Configure miss: x86_64-generic-linux-gnu-readelf
-Configure miss: windres
-Configure miss: x86_64-generic-linux-gnu-windmc
-Configure miss: windmc
-Configure miss: whether we are cross compiling... checking whether we are cross compiling... checking whether the C compiler works
-Configure miss: suffix of object files
-Configure miss: how to run the C preprocessor... checking for suffix of executables
-Configure miss: whether gcc supports -W
-Configure miss: compiler option needed when checking for declarations
-Configure miss: unistd.h... checking for xgettext
-Configure miss: stdint.h
-Configure miss: off_t
-Configure miss: int_least32_t
-Configure miss: uint64_t
-Configure miss: size of int
-Configure miss: fcntl.h
-Configure miss: sys/uio.h
-Configure miss: unsigned long long
-Configure miss: inttypes.h
-Configure miss: whether system header files limit the line length... checking whether the C compiler works
-Configure miss: if the linker (ld) is GNU ld
-Configure miss: argz.h presence
-Configure miss: locale.h presence
-Configure miss: feof_unlocked
-Configure miss: intptr_t
-Configure miss: geteuid
-Configure miss: uintptr_t
-Configure miss: fcntl
-Configure miss: pselect
-Configure miss: putenv
-Configure miss: random... checking for __xpg_strerror_r
-Configure miss: host system type
-Configure miss: varargs.h
-Configure miss: snprintf... checking for pipe
-Configure miss: sys/pte.h presence
-Configure miss: sys/pte.h
-Configure miss: iswcntrl... checking for sigsetmask
-Configure miss: sys/stream.h presence
-Configure miss: sys/stream.h
-Configure miss: sys/ptem.h
-Configure miss: strcasecmp
-Configure miss: strchr
-Configure miss: strnlen
-Configure miss: strstr
-Configure miss: speed_t in sys/types.h
-Configure miss: strtod
-Configure miss: libaudit.h presence
-Configure miss: libaudit.h
-Configure miss: tgetent in -ltermcap... checking for strtoul
-Configure miss: mbstr.h usability
-Configure miss: mbstr.h
-Configure miss: tmpnam
-Configure miss: vasprintf
-Configure miss: vsnprintf
-Configure miss: wcwidth
-Configure miss: towlower
-Configure miss: nl_langinfo and CODESET
-Configure miss: dup3
-Configure miss: struct sockaddr_storage
-Configure miss: where to find the exponent in a 'double'
-Configure miss: pstat_getstatic
-Configure miss: GNU libc compatible malloc
-Configure miss: strerror
-Configure miss: sysctl
-Configure miss: whether memchr works
-Configure miss: memmem
-Configure miss: whether strdup is declared
-Configure miss: strerror_r with POSIX signature
-Configure miss: whether dup works
-Configure miss: whether gcc understands -c and -o together
-Configure miss: whether conversion from 'int' to 'long double' works
-Configure miss: whether it is safe to define __EXTENSIONS__
-Configure miss: whether getcwd handles long file names properly... checking if gcc supports -fno-rtti -fno-exceptions... checking if gcc supports -fno-rtti -fno-exceptions
-Configure miss: gcc option to produce PIC
+Configure miss: Mach-O support in BFD
+Configure miss: PT_GETDBREGS
+Configure miss: PT_GETXMMREGS
+Configure miss: TD_VERSION
+Configure miss: X
+Configure miss: _FILE_OFFSET_BITS value needed for large files... checking for stdint.h
+Configure miss: a sed that does not truncate output
+Configure miss: a thread-safe mkdir -p... checking whether to enable maintainer-specific portions of Makefiles
+Configure miss: alloca
+Configure miss: alloca.h
+Configure miss: arpa/inet.h usability
+Configure miss: autoconf
 Configure miss: catalogs to be installed
-Configure miss: whether getcwd aborts when 4k < cwd_length < 16k
-Configure miss: msgmerge
-Configure miss: library containing dlsym
-Configure miss: fcntl.h presence
+Configure miss: compiler option needed when checking for declarations
+Configure miss: cursesX.h
+Configure miss: cursesX.h presence
+Configure miss: cursesX.h usability
+Configure miss: cygwin
+Configure miss: decfloat support in printf
+Configure miss: dlfcn.h
+Configure miss: dlopen in -ldl
+Configure miss: egrep
+Configure miss: elf_hp.h
+Configure miss: elf_hp.h presence
+Configure miss: elf_hp.h usability
+Configure miss: error_at_line
+Configure miss: fcntl... checking for getegid
+Configure miss: feof_unlocked
+Configure miss: fpregset_t in sys/procfs.h
+Configure miss: fseeko
+Configure miss: ftello64
+Configure miss: gregset_t in sys/procfs.h
+Configure miss: gregset_t in sys/procfs.h
+Configure miss: host system type
+Configure miss: how to print strings
+Configure miss: if building for x32
+Configure miss: if gcc PIC flag -fPIC -DPIC works
+Configure miss: if gcc supports -c -o file.o
+Configure miss: int_fast32_t
+Configure miss: int_least32_t
+Configure miss: inttypes.h
+Configure miss: isl 0.15 or later
+Configure miss: libaudit.h
+Configure miss: libaudit.h presence
+Configure miss: libbabeltrace
+Configure miss: libdebuginfod >= 0.179
+Configure miss: libiconvlist
+Configure miss: libmpfr
+Configure miss: library containing kinfo_getfile
+Configure miss: library containing kinfo_getvmmap
 Configure miss: library containing opendir
-Configure miss: getpagesize
-Configure miss: mkdtemp
-Configure miss: gcc version with buggy 64-bit support
-Configure miss: prstatus32_t in sys/procfs.h
-Configure miss: prstatus_t.pr_who in sys/procfs.h
-Configure miss: whether rename manages hard links correctly
-Configure miss: pstatus_t in sys/procfs.h
-Configure miss: pxstatus_t in sys/procfs.h
-Configure miss: whether rename manages existing destinations correctly
+Configure miss: libunwind-ia64.h
+Configure miss: libunwind-ia64.h presence
+Configure miss: libunwind-ia64.h usability
+Configure miss: libxxhash
+Configure miss: limits.h presence... checking for sys/stat.h... checking for btowc
+Configure miss: long long
+Configure miss: lwpid_t in sys/procfs.h
+Configure miss: lwpstatus_t in sys/procfs.h... checking for volatile sig_atomic_t
+Configure miss: machine/reg.h
+Configure miss: machine/reg.h presence
+Configure miss: machine/reg.h usability
+Configure miss: mbstr.h
+Configure miss: mbstr.h presence
+Configure miss: memmove
+Configure miss: memory.h
+Configure miss: mprotect... checking whether included gettext is requested
+Configure miss: ncurses/ncurses.h
+Configure miss: ncurses/ncurses.h presence
+Configure miss: ncurses/ncurses.h usability
+Configure miss: ncurses/term.h
+Configure miss: ncurses/term.h presence
+Configure miss: ncurses/term.h usability
+Configure miss: ncursesw/ncurses.h
+Configure miss: ncursesw/ncurses.h presence
+Configure miss: ncursesw/ncurses.h usability
+Configure miss: netdb.h presence
+Configure miss: nl_langinfo and CODESET... checking for stpncpy
+Configure miss: nlist.h
+Configure miss: nlist.h presence
+Configure miss: opendir
+Configure miss: pipe
+Configure miss: poll
+Configure miss: poll.h presence
+Configure miss: prgregset32_t in sys/procfs.h
+Configure miss: prgregset32_t in sys/procfs.h
+Configure miss: prgregset32_t in sys/procfs.h
 Configure miss: prpsinfo32_t in sys/procfs.h
 Configure miss: prpsinfo32_t.pr_pid in sys/procfs.h
-Configure miss: rewinddir
+Configure miss: prstatus32_t in sys/procfs.h
+Configure miss: prstatus32_t.pr_who in sys/procfs.h
+Configure miss: psignal
+Configure miss: psinfo32_t in sys/procfs.h
 Configure miss: psinfo_t.pr_pid in sys/procfs.h
-Configure miss: whether rmdir works
-Configure miss: psinfo32_t.pr_pid in sys/procfs.h
-Configure miss: lwpstatus_t in sys/procfs.h
-Configure miss: whether setenv validates arguments
-Configure miss: lwpstatus_t.pr_context in sys/procfs.h
-Configure miss: lwpstatus_t.pr_reg in sys/procfs.h
-Configure miss: volatile sig_atomic_t
-Configure miss: sighandler_t
-Configure miss: struct stat.st_birthtimensec... checking for fseeko64
-Configure miss: fopen64
-Configure miss: whether the C compiler works
-Configure miss: memory.h
-Configure miss: whether we are using the GNU C compiler
-Configure miss: sys/types.h
-Configure miss: working alloca.h
-Configure miss: thread_db.h usability
-Configure miss: wait.h usability
-Configure miss: _FILE_OFFSET_BITS value needed for large files... checking poll.h usability
-Configure miss: linux/elf.h usability... checking for library containing dlopen
-Configure miss: linux/elf.h presence
-Configure miss: getrlimit
-Configure miss: working fork
-Configure miss: getrusage
-Configure miss: getauxval
+Configure miss: pstat_getstatic
+Configure miss: pstatus32_t in sys/procfs.h
+Configure miss: pstatus_t in sys/procfs.h
 Configure miss: pthread_setname_np
-Configure miss: struct pt_insn.enabled
-Configure miss: pthread_setname_np
-Configure miss: gregset_t in sys/procfs.h
-Configure miss: prgregset32_t in sys/procfs.h
-Configure miss: netdb.h usability
-Configure miss: prgregset32_t in sys/procfs.h
-Configure miss: lwpid_t in sys/procfs.h
-Configure miss: psaddr_t in sys/procfs.h
-Configure miss: ws2tcpip.h
-Configure miss: pwrite
-Configure miss: ptrace.h presence
 Configure miss: ptrace.h
+Configure miss: ptrace.h
+Configure miss: ptrace.h
+Configure miss: ptrace.h presence
+Configure miss: ptrace.h presence
+Configure miss: ptrace.h presence
 Configure miss: ptrace.h usability
-Configure miss: ptrace.h presence
-Configure miss: ptrace.h
-Configure miss: if building for x32
-Configure miss: libdebuginfod >= 0.179
-Configure miss: libunwind-ia64.h usability
-Configure miss: libunwind-ia64.h presence
-Configure miss: libunwind-ia64.h
-Configure miss: library containing kinfo_getvmmap
-Configure miss: libmpfr
-Configure miss: usable guile from /usr/bin/pkg-config
-Configure miss: the source-highlight library
-Configure miss: nlist.h usability
-Configure miss: nlist.h presence
-Configure miss: nlist.h
-Configure miss: machine/reg.h presence
-Configure miss: machine/reg.h
-Configure miss: ptrace.h usability
-Configure miss: ptrace.h presence
-Configure miss: ptrace.h
-Configure miss: elf_hp.h usability
-Configure miss: elf_hp.h presence
-Configure miss: elf_hp.h
-Configure miss: cursesX.h usability
-Configure miss: cursesX.h presence
-Configure miss: cursesX.h
-Configure miss: ncursesw/ncurses.h usability
-Configure miss: ncursesw/ncurses.h presence
-Configure miss: ncursesw/ncurses.h
-Configure miss: ncurses/ncurses.h usability
-Configure miss: ncurses/ncurses.h presence
-Configure miss: ncurses/ncurses.h
-Configure miss: ncurses/term.h usability
-Configure miss: ncurses/term.h presence
-Configure miss: ncurses/term.h
-Configure miss: ws2tcpip.h usability
-Configure miss: ws2tcpip.h presence
-Configure miss: ws2tcpip.h
-Configure miss: ttrace
-Configure miss: libiconvlist
 Configure miss: ptrace64
-Configure miss: library containing kinfo_getfile
+Configure miss: pwrite
+Configure miss: qsort_r signature
+Configure miss: rewinddir
+Configure miss: sbrk
+Configure miss: setpgrp
+Configure miss: sighandler_t
+Configure miss: size of long
+Configure miss: size_t
+Configure miss: socklen_t
+Configure miss: spawnvpe
+Configure miss: speed_t in sys/types.h
+Configure miss: ssize_t
+Configure miss: stack direction for C alloca
+Configure miss: stpcpy... checking for wmempcpy
+Configure miss: strcasecmp
+Configure miss: strdup
+Configure miss: strerror
+Configure miss: strings.h
+Configure miss: strpbrk
+Configure miss: strrchr
+Configure miss: strtod
+Configure miss: strtol
+Configure miss: strtoull
+Configure miss: struct lwp
+Configure miss: struct pt_insn.enabled
 Configure miss: struct pt_insn.enabled
 Configure miss: struct pt_insn.resynced
-Configure miss: gregset_t in sys/procfs.h
-Configure miss: fpregset_t in sys/procfs.h
-Configure miss: prgregset32_t in sys/procfs.h
-Configure miss: struct thread.td_pcb
-Configure miss: struct lwp
+Configure miss: struct ptrace_lwpinfo.pl_syscall_code
+Configure miss: struct ptrace_lwpinfo.pl_tdname
 Configure miss: struct reg in machine/reg.h
 Configure miss: struct reg.r_fs
 Configure miss: struct reg.r_gs
-Configure miss: PT_GETDBREGS
-Configure miss: PT_GETXMMREGS
-Configure miss: struct ptrace_lwpinfo.pl_tdname
-Configure miss: struct ptrace_lwpinfo.pl_syscall_code
-Configure miss: decfloat support in printf
-Configure miss: cygwin
-Configure miss: Mach-O support in BFD
-Configure miss: X
-Configure miss: libbabeltrace
-Configure miss: libxxhash
+Configure miss: struct thread.td_pcb
+Configure miss: suffix of executables
+Configure miss: suffix of executables
+Configure miss: suffix of object files
+Configure miss: suffix of object files
+Configure miss: sys/ioctl.h usability
+Configure miss: sys/mman.h
+Configure miss: sys/pte.h
+Configure miss: sys/pte.h presence... checking for strerror_r
+Configure miss: sys/ptem.h
+Configure miss: sys/stream.h
+Configure miss: sys/sysmp.h
+Configure miss: sys/systemcfg.h
+Configure miss: sys/types.h
+Configure miss: table... checking whether <limits.h> defines MIN and MAX
+Configure miss: the maximum length of command line arguments
+Configure miss: the source-highlight library
+Configure miss: thread_db.h presence
+Configure miss: ttrace
+Configure miss: uintptr_t
+Configure miss: unsigned long long... checking for machine/hal_sysinfo.h
+Configure miss: usable guile from /usr/bin/pkg-config
+Configure miss: ust
+Configure miss: varargs.h
+Configure miss: wait.h presence
+Configure miss: whether <wchar.h> uses 'inline' correctly
+Configure miss: whether _XOPEN_SOURCE should be defined... checking for inttypes.h
+Configure miss: whether fchdir is declared
+Configure miss: whether fcntl handles F_DUPFD correctly
+Configure miss: whether gcc is Clang... checking for getauxval
+Configure miss: whether gcc is Clang... checking for pthread_setname_np
+Configure miss: whether gcc supports -Wwrite-strings... checking for special C compiler options needed for large files
+Configure miss: whether gcc understands -c and -o together
+Configure miss: whether getcwd aborts when 4k < cwd_length < 16k... checking if gcc supports -fno-rtti -fno-exceptions... checking if gcc supports -fno-rtti -fno-exceptions
+Configure miss: whether getcwd handles long file names properly
+Configure miss: whether imported symbols can be declared weak
+Configure miss: whether lstat correctly handles trailing slash
+Configure miss: whether make sets $(MAKE)... checking whether to enable maintainer-specific portions of Makefiles
+Configure miss: whether malloc is declared
+Configure miss: whether memrchr is declared
+Configure miss: whether realpath works
+Configure miss: whether rename manages existing destinations correctly
+Configure miss: whether rename manages hard links correctly... checking for gcc version with buggy 64-bit support
+Configure miss: whether setenv is declared
+Configure miss: whether setenv validates arguments
+Configure miss: whether stat handles trailing slashes on files
+Configure miss: whether strstr works
 Configure miss: whether to use xxhash
+Configure miss: whether we are cross compiling... checking whether the C compiler works
+Configure miss: whether we are using the GNU C compiler
+Configure miss: win32_pstatus_t in sys/procfs.h
+Configure miss: windmc
+Configure miss: windmc
+Configure miss: windres
+Configure miss: windres
+Configure miss: ws2tcpip.h
+Configure miss: ws2tcpip.h
+Configure miss: ws2tcpip.h presence
+Configure miss: ws2tcpip.h presence
+Configure miss: ws2tcpip.h usability
+Configure miss: ws2tcpip.h usability
+Configure miss: x86_64-generic-linux-gnu-as
+Configure miss: x86_64-generic-linux-gnu-as
+Configure miss: x86_64-generic-linux-gnu-gccgo
+Configure miss: x86_64-generic-linux-gnu-gnatbind
+Configure miss: x86_64-generic-linux-gnu-gnatmake
+Configure miss: x86_64-generic-linux-gnu-ld
+Configure miss: x86_64-generic-linux-gnu-ld
+Configure miss: x86_64-generic-linux-gnu-lipo
+Configure miss: x86_64-generic-linux-gnu-lipo
+Configure miss: x86_64-generic-linux-gnu-objcopy
+Configure miss: x86_64-generic-linux-gnu-objcopy
+Configure miss: x86_64-generic-linux-gnu-readelf
+Configure miss: x86_64-generic-linux-gnu-readelf
+Configure miss: x86_64-generic-linux-gnu-windmc
+Configure miss: x86_64-generic-linux-gnu-windmc

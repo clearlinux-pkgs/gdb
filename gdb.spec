@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 10.1
-Release  : 279
+Release  : 280
 URL      : https://mirrors.kernel.org/gnu/gdb/gdb-10.1.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-10.1.tar.xz
 Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-10.1.tar.xz.sig
@@ -43,6 +43,7 @@ BuildRequires : python3-dev
 BuildRequires : sed
 BuildRequires : tcl
 BuildRequires : texinfo
+BuildRequires : util-linux
 BuildRequires : xz-dev
 
 %description
@@ -124,7 +125,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1615843718
+export SOURCE_DATE_EPOCH=1615940444
 unset LD_AS_NEEDED
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -134,11 +135,21 @@ export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -m
 export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
-%configure  --enable-static  --with-separate-debug-dir=/usr/lib/debug --enable-tui --enable-targets=%{_arch}-unknown-linux-gnu,%{_arch}-generic-linux-gnu  --target=%{_arch}-generic-linux-gnu %{_arch}-generic-linux-gnu --with-python=yes --enable-plugins --disable-rpath --with-system-zlib --with-intel-pt PYTHON=/usr/bin/python3 --with-python=yes
+%configure  --disable-rpath \
+--enable-plugins \
+--enable-static \
+--enable-targets=%{_arch}-unknown-linux-gnu \
+--enable-tui \
+--target=%{_arch}-generic-linux-gnu \
+--with-intel-pt \
+--with-python=yes \
+--with-separate-debug-dir=/usr/lib/debug \
+--with-system-zlib \
+PYTHON=/usr/bin/python3
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1615843718
+export SOURCE_DATE_EPOCH=1615940444
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gdb
 cp %{_builddir}/gdb-10.1/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
