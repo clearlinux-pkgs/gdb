@@ -1,5 +1,5 @@
-10.2
-gettext
+11.1
 gfortran
 glibc-locale
 libxslt-bin
+pkg-config

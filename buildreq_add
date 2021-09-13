@@ -20,3 +20,4 @@ gcc-libgcc32
 processor-trace-dev
 python3-dev
 mpfr-dev
+gmp-dev
