@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 11.1
-Release  : 321
+Release  : 322
 URL      : https://mirrors.kernel.org/gnu/gdb/gdb-11.1.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-11.1.tar.xz
 Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-11.1.tar.xz.sig
@@ -125,7 +125,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1634849459
+export SOURCE_DATE_EPOCH=1634850415
 unset LD_AS_NEEDED
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -146,10 +146,10 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto -fstack-protector-st
 --with-separate-debug-dir=/usr/lib/debug \
 --with-system-zlib \
 PYTHON=/usr/bin/python3
-make  %{?_smp_mflags}
+make  %{?_smp_mflags}  -O
 
 %install
-export SOURCE_DATE_EPOCH=1634849459
+export SOURCE_DATE_EPOCH=1634850415
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gdb
 cp %{_builddir}/gdb-11.1/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
