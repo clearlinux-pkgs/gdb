@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 11.1
-Release  : 325
+Release  : 326
 URL      : https://mirrors.kernel.org/gnu/gdb/gdb-11.1.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-11.1.tar.xz
 Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-11.1.tar.xz.sig
@@ -21,6 +21,7 @@ Requires: gdb-license = %{version}-%{release}
 Requires: gdb-man = %{version}-%{release}
 BuildRequires : binutils-dev
 BuildRequires : bison
+BuildRequires : buildreq-distutils3
 BuildRequires : buildreq-golang
 BuildRequires : dejagnu
 BuildRequires : expat-dev
@@ -119,13 +120,13 @@ cd %{_builddir}/gdb-11.1
 
 %build
 ## build_prepend content
-export LDFLAGS="-Wl,--whole-archive /usr/lib64/libpython3.9.so -Wl,--no-whole-archive"
+export LDFLAGS="-Wl,--whole-archive /usr/lib64/libpython3.10.so -Wl,--no-whole-archive"
 ## build_prepend end
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1634850415
+export SOURCE_DATE_EPOCH=1637020990
 unset LD_AS_NEEDED
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -149,7 +150,7 @@ PYTHON=/usr/bin/python3
 make  %{?_smp_mflags}  -O
 
 %install
-export SOURCE_DATE_EPOCH=1634850415
+export SOURCE_DATE_EPOCH=1637020990
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gdb
 cp %{_builddir}/gdb-11.1/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
