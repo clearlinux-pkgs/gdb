@@ -36,7 +36,6 @@ Configure miss: kinfo_getfile
 Configure miss: libaudit.h
 Configure miss: libaudit.h presence
 Configure miss: libaudit.h usability
-Configure miss: libbabeltrace
 Configure miss: libdebuginfod >= 0.179
 Configure miss: libiconvlist
 Configure miss: library containing kinfo_getfile
@@ -69,9 +68,6 @@ Configure miss: ncurses/term.h usability
 Configure miss: ncursesw/ncurses.h
 Configure miss: ncursesw/ncurses.h presence
 Configure miss: ncursesw/ncurses.h usability
-Configure miss: nlist.h
-Configure miss: nlist.h presence
-Configure miss: nlist.h usability
 Configure miss: prgregset32_t in sys/procfs.h
 Configure miss: prgregset32_t in sys/procfs.h
 Configure miss: prgregset32_t in sys/procfs.h
@@ -140,7 +136,6 @@ Configure miss: sysctl
 Configure miss: sysmp
 Configure miss: tgetent
 Configure miss: tgetent in -ltermcap
-Configure miss: the source-highlight library
 Configure miss: ttrace
 Configure miss: usable guile from /usr/bin/pkg-config
 Configure miss: ust

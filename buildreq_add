@@ -19,3 +19,7 @@ processor-trace-dev
 python3-dev
 mpfr-dev
 gmp-dev
+source-highlight-dev
+elfutils-dev
+boost-dev
+babeltrace-dev

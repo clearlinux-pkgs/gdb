@@ -6,12 +6,12 @@
 #
 %define keepstatic 1
 Name     : gdb
-Version  : 11.1
-Release  : 326
-URL      : https://mirrors.kernel.org/gnu/gdb/gdb-11.1.tar.xz
-Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-11.1.tar.xz
-Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-11.1.tar.xz.sig
-Summary  : Gnu Readline library for command line editing
+Version  : 11.2
+Release  : 327
+URL      : https://mirrors.kernel.org/gnu/gdb/gdb-11.2.tar.xz
+Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-11.2.tar.xz
+Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-11.2.tar.xz.sig
+Summary  : zlib compression library
 Group    : Development/Tools
 License  : BSL-1.0 GFDL-1.1 GPL-1.0+ GPL-2.0 GPL-2.0+ GPL-3.0 GPL-3.0+ LGPL-2.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0 Public-Domain
 Requires: gdb-bin = %{version}-%{release}
@@ -19,16 +19,18 @@ Requires: gdb-data = %{version}-%{release}
 Requires: gdb-info = %{version}-%{release}
 Requires: gdb-license = %{version}-%{release}
 Requires: gdb-man = %{version}-%{release}
+BuildRequires : babeltrace-dev
 BuildRequires : binutils-dev
 BuildRequires : bison
+BuildRequires : boost-dev
 BuildRequires : buildreq-distutils3
 BuildRequires : buildreq-golang
 BuildRequires : dejagnu
+BuildRequires : elfutils-dev
 BuildRequires : expat-dev
 BuildRequires : expect
 BuildRequires : flex
 BuildRequires : gcc-libgcc32
-BuildRequires : gettext
 BuildRequires : gfortran
 BuildRequires : glibc-dev32
 BuildRequires : glibc-locale
@@ -37,12 +39,12 @@ BuildRequires : gmp-dev
 BuildRequires : libxslt-bin
 BuildRequires : mpfr-dev
 BuildRequires : ncurses-dev
-BuildRequires : pkg-config
 BuildRequires : pkgconfig(zlib)
 BuildRequires : processor-trace-dev
 BuildRequires : procps-ng
 BuildRequires : python3-dev
 BuildRequires : sed
+BuildRequires : source-highlight-dev
 BuildRequires : tcl
 BuildRequires : texinfo
 BuildRequires : xz-dev
@@ -115,8 +117,8 @@ staticdev components for the gdb package.
 
 
 %prep
-%setup -q -n gdb-11.1
-cd %{_builddir}/gdb-11.1
+%setup -q -n gdb-11.2
+cd %{_builddir}/gdb-11.2
 
 %build
 ## build_prepend content
@@ -126,7 +128,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1637020990
+export SOURCE_DATE_EPOCH=1642375268
 unset LD_AS_NEEDED
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -150,24 +152,24 @@ PYTHON=/usr/bin/python3
 make  %{?_smp_mflags}  -O
 
 %install
-export SOURCE_DATE_EPOCH=1637020990
+export SOURCE_DATE_EPOCH=1642375268
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gdb
-cp %{_builddir}/gdb-11.1/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
-cp %{_builddir}/gdb-11.1/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/0e8e850b0580fbaaa0872326cb1b8ad6adda9b0d
-cp %{_builddir}/gdb-11.1/COPYING3 %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-11.1/COPYING3.LIB %{buildroot}/usr/share/package-licenses/gdb/e7d563f52bf5295e6dba1d67ac23e9f6a160fab9
-cp %{_builddir}/gdb-11.1/bfd/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-11.1/gdb/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-11.1/include/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
-cp %{_builddir}/gdb-11.1/include/COPYING3 %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-11.1/libiberty/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/597bf5f9c0904bd6c48ac3a3527685818d11246d
-cp %{_builddir}/gdb-11.1/libiberty/copying-lib.texi %{buildroot}/usr/share/package-licenses/gdb/0533e856d64a28ae9b067604a701e3a14cf6a80c
-cp %{_builddir}/gdb-11.1/readline/readline/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-11.1/sim/arm/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-11.1/sim/ppc/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-11.1/sim/ppc/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/5fb362ef1680e635fe5fb212b55eef4db9ead48f
-cp %{_builddir}/gdb-11.1/zlib/contrib/dotzlib/LICENSE_1_0.txt %{buildroot}/usr/share/package-licenses/gdb/892b34f7865d90a6f949f50d95e49625a10bc7f0
+cp %{_builddir}/gdb-11.2/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
+cp %{_builddir}/gdb-11.2/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/0e8e850b0580fbaaa0872326cb1b8ad6adda9b0d
+cp %{_builddir}/gdb-11.2/COPYING3 %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-11.2/COPYING3.LIB %{buildroot}/usr/share/package-licenses/gdb/e7d563f52bf5295e6dba1d67ac23e9f6a160fab9
+cp %{_builddir}/gdb-11.2/bfd/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-11.2/gdb/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-11.2/include/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
+cp %{_builddir}/gdb-11.2/include/COPYING3 %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-11.2/libiberty/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/597bf5f9c0904bd6c48ac3a3527685818d11246d
+cp %{_builddir}/gdb-11.2/libiberty/copying-lib.texi %{buildroot}/usr/share/package-licenses/gdb/0533e856d64a28ae9b067604a701e3a14cf6a80c
+cp %{_builddir}/gdb-11.2/readline/readline/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-11.2/sim/arm/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-11.2/sim/ppc/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-11.2/sim/ppc/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/5fb362ef1680e635fe5fb212b55eef4db9ead48f
+cp %{_builddir}/gdb-11.2/zlib/contrib/dotzlib/LICENSE_1_0.txt %{buildroot}/usr/share/package-licenses/gdb/892b34f7865d90a6f949f50d95e49625a10bc7f0
 %make_install
 ## Remove excluded files
 rm -f %{buildroot}*/usr/share/info/bfd.info
