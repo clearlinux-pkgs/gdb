@@ -6,11 +6,11 @@
 #
 %define keepstatic 1
 Name     : gdb
-Version  : 11.2
-Release  : 340
-URL      : https://mirrors.kernel.org/gnu/gdb/gdb-11.2.tar.xz
-Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-11.2.tar.xz
-Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-11.2.tar.xz.sig
+Version  : 12.1
+Release  : 341
+URL      : https://mirrors.kernel.org/gnu/gdb/gdb-12.1.tar.xz
+Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-12.1.tar.xz
+Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-12.1.tar.xz.sig
 Summary  : zlib compression library
 Group    : Development/Tools
 License  : BSL-1.0 GFDL-1.1 GPL-1.0+ GPL-2.0 GPL-2.0+ GPL-3.0 GPL-3.0+ LGPL-2.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0 Public-Domain
@@ -19,6 +19,7 @@ Requires: gdb-data = %{version}-%{release}
 Requires: gdb-info = %{version}-%{release}
 Requires: gdb-license = %{version}-%{release}
 Requires: gdb-man = %{version}-%{release}
+BuildRequires : SDL2-dev
 BuildRequires : babeltrace-dev
 BuildRequires : binutils-dev
 BuildRequires : bison
@@ -116,8 +117,8 @@ staticdev components for the gdb package.
 
 
 %prep
-%setup -q -n gdb-11.2
-cd %{_builddir}/gdb-11.2
+%setup -q -n gdb-12.1
+cd %{_builddir}/gdb-12.1
 
 %build
 ## build_prepend content
@@ -127,7 +128,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1647636754
+export SOURCE_DATE_EPOCH=1651519149
 unset LD_AS_NEEDED
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -151,24 +152,22 @@ PYTHON=/usr/bin/python3
 make  %{?_smp_mflags}  -O
 
 %install
-export SOURCE_DATE_EPOCH=1647636754
+export SOURCE_DATE_EPOCH=1651519149
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gdb
-cp %{_builddir}/gdb-11.2/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
-cp %{_builddir}/gdb-11.2/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/0e8e850b0580fbaaa0872326cb1b8ad6adda9b0d
-cp %{_builddir}/gdb-11.2/COPYING3 %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-11.2/COPYING3.LIB %{buildroot}/usr/share/package-licenses/gdb/e7d563f52bf5295e6dba1d67ac23e9f6a160fab9
-cp %{_builddir}/gdb-11.2/bfd/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-11.2/gdb/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-11.2/include/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
-cp %{_builddir}/gdb-11.2/include/COPYING3 %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-11.2/libiberty/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/597bf5f9c0904bd6c48ac3a3527685818d11246d
-cp %{_builddir}/gdb-11.2/libiberty/copying-lib.texi %{buildroot}/usr/share/package-licenses/gdb/0533e856d64a28ae9b067604a701e3a14cf6a80c
-cp %{_builddir}/gdb-11.2/readline/readline/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-11.2/sim/arm/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-11.2/sim/ppc/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/gdb-11.2/sim/ppc/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/5fb362ef1680e635fe5fb212b55eef4db9ead48f
-cp %{_builddir}/gdb-11.2/zlib/contrib/dotzlib/LICENSE_1_0.txt %{buildroot}/usr/share/package-licenses/gdb/892b34f7865d90a6f949f50d95e49625a10bc7f0
+cp %{_builddir}/gdb-12.1/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
+cp %{_builddir}/gdb-12.1/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/0e8e850b0580fbaaa0872326cb1b8ad6adda9b0d
+cp %{_builddir}/gdb-12.1/COPYING3 %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-12.1/COPYING3.LIB %{buildroot}/usr/share/package-licenses/gdb/e7d563f52bf5295e6dba1d67ac23e9f6a160fab9
+cp %{_builddir}/gdb-12.1/bfd/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-12.1/gdb/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-12.1/include/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
+cp %{_builddir}/gdb-12.1/include/COPYING3 %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-12.1/libiberty/COPYING.LIB %{buildroot}/usr/share/package-licenses/gdb/597bf5f9c0904bd6c48ac3a3527685818d11246d
+cp %{_builddir}/gdb-12.1/libiberty/copying-lib.texi %{buildroot}/usr/share/package-licenses/gdb/beb56348433d183b962b87b5bff2b67047cc8bc3
+cp %{_builddir}/gdb-12.1/readline/readline/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-12.1/sim/COPYING %{buildroot}/usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gdb-12.1/zlib/contrib/dotzlib/LICENSE_1_0.txt %{buildroot}/usr/share/package-licenses/gdb/892b34f7865d90a6f949f50d95e49625a10bc7f0
 %make_install
 ## Remove excluded files
 rm -f %{buildroot}*/usr/share/info/bfd.info
@@ -221,6 +220,7 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 /usr/share/gdb/python/gdb/printer/bound_registers.py
 /usr/share/gdb/python/gdb/printing.py
 /usr/share/gdb/python/gdb/prompt.py
+/usr/share/gdb/python/gdb/styling.py
 /usr/share/gdb/python/gdb/types.py
 /usr/share/gdb/python/gdb/unwinder.py
 /usr/share/gdb/python/gdb/xmethod.py
@@ -246,13 +246,12 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 %files dev
 %defattr(-,root,root,-)
 /usr/include/gdb/jit-reader.h
-/usr/include/sim/callback.h
-/usr/include/sim/sim.h
 /usr/lib64/libinproctrace.so
 
 %files info
 %defattr(0644,root,root,0755)
 /usr/share/info/annotate.info
+/usr/share/info/ctf-spec.info
 /usr/share/info/gdb.info
 /usr/share/info/gdb.info-1
 /usr/share/info/gdb.info-2
@@ -266,13 +265,12 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/gdb/0533e856d64a28ae9b067604a701e3a14cf6a80c
 /usr/share/package-licenses/gdb/0e8e850b0580fbaaa0872326cb1b8ad6adda9b0d
 /usr/share/package-licenses/gdb/597bf5f9c0904bd6c48ac3a3527685818d11246d
-/usr/share/package-licenses/gdb/5fb362ef1680e635fe5fb212b55eef4db9ead48f
 /usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
 /usr/share/package-licenses/gdb/8624bcdae55baeef00cd11d5dfcfa60f68710a02
 /usr/share/package-licenses/gdb/892b34f7865d90a6f949f50d95e49625a10bc7f0
+/usr/share/package-licenses/gdb/beb56348433d183b962b87b5bff2b67047cc8bc3
 /usr/share/package-licenses/gdb/e7d563f52bf5295e6dba1d67ac23e9f6a160fab9
 
 %files man

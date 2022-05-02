@@ -1,6 +1,7 @@
+Configure miss: KERN_PROC
+Configure miss: KERN_PROG_ARGS
 Configure miss: Mach-O support in BFD
 Configure miss: PT_GETDBREGS
-Configure miss: PT_GETXMMREGS
 Configure miss: TIOCSTAT in sys/ioctl.h
 Configure miss: X
 Configure miss: aint
@@ -15,6 +16,7 @@ Configure miss: cygwin
 Configure miss: cygwin
 Configure miss: decfloat support in printf
 Configure miss: dtc
+Configure miss: dwz
 Configure miss: elf_hp.h
 Configure miss: elf_hp.h presence
 Configure miss: elf_hp.h usability
@@ -50,6 +52,9 @@ Configure miss: lwpstatus_t.pr_context in sys/procfs.h
 Configure miss: lwpstatus_t.pr_fpreg in sys/procfs.h
 Configure miss: lwpstatus_t.pr_reg in sys/procfs.h
 Configure miss: lwpxstatus_t in sys/procfs.h
+Configure miss: mach-o/dyld.h
+Configure miss: mach-o/dyld.h presence
+Configure miss: mach-o/dyld.h usability
 Configure miss: machine/reg.h
 Configure miss: machine/reg.h presence
 Configure miss: machine/reg.h usability
@@ -96,7 +101,6 @@ Configure miss: ptrace64
 Configure miss: ptrace64
 Configure miss: ptrace64
 Configure miss: pxstatus_t in sys/procfs.h
-Configure miss: sdl
 Configure miss: spawnvpe
 Configure miss: speed_t in sys/types.h
 Configure miss: sqrt
@@ -114,6 +118,9 @@ Configure miss: struct reg in machine/reg.h
 Configure miss: struct reg.r_fs
 Configure miss: struct reg.r_gs
 Configure miss: struct thread.td_pcb
+Configure miss: sys/ldr.h
+Configure miss: sys/ldr.h presence
+Configure miss: sys/ldr.h usability
 Configure miss: sys/procctl.h
 Configure miss: sys/procctl.h presence
 Configure miss: sys/procctl.h usability
@@ -147,6 +154,7 @@ Configure miss: whether errno must be declared
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether or not strcoll and strcmp differ
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
+Configure miss: whether sim frv should dump cpu state on unknown traps
 Configure miss: whether the compiler is clang
 Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the ctype macros accept non-ascii characters
