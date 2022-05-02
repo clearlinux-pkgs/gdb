@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 12.1
-Release  : 341
+Release  : 342
 URL      : https://mirrors.kernel.org/gnu/gdb/gdb-12.1.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-12.1.tar.xz
 Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-12.1.tar.xz.sig
@@ -128,7 +128,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1651519149
+export SOURCE_DATE_EPOCH=1651520599
 unset LD_AS_NEEDED
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -152,7 +152,7 @@ PYTHON=/usr/bin/python3
 make  %{?_smp_mflags}  -O
 
 %install
-export SOURCE_DATE_EPOCH=1651519149
+export SOURCE_DATE_EPOCH=1651520599
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gdb
 cp %{_builddir}/gdb-12.1/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1
@@ -183,6 +183,7 @@ rm -f %{buildroot}*/usr/include/diagnostics.h
 rm -f %{buildroot}*/usr/include/bfd_stdint.h
 rm -f %{buildroot}*/usr/include/ctf-api.h
 rm -f %{buildroot}*/usr/include/ctf.h
+rm -f %{buildroot}*/usr/share/info/ctf-spec.info
 ## install_append content
 rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/bfd.mo
 rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
@@ -251,7 +252,6 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 %files info
 %defattr(0644,root,root,0755)
 /usr/share/info/annotate.info
-/usr/share/info/ctf-spec.info
 /usr/share/info/gdb.info
 /usr/share/info/gdb.info-1
 /usr/share/info/gdb.info-2
