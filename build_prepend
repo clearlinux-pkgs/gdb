@@ -1,1 +1,1 @@
-export LDFLAGS="-Wl,--whole-archive /usr/lib64/libpython3.10.so -Wl,--no-whole-archive"
+export LDFLAGS="-Wl,--whole-archive /usr/lib64/libpython3.11.so -Wl,--no-whole-archive"

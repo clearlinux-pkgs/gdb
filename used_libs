@@ -3,7 +3,6 @@ libbabeltrace-ctf.so.1
 libbabeltrace.so.1
 libboost_regex.so.1.77.0
 libc.so.6
-libcrypt.so.1
 libexpat.so.1
 libgcc_s.so.1
 libgmp.so.10
@@ -12,7 +11,7 @@ liblzma.so.5
 libm.so.6
 libmpfr.so.6
 libncursesw.so.6
-libpython3.10.so.1.0
+libpython3.11.so.1.0
 libsource-highlight.so.4
 libstdc++.so.6
 libtinfow.so.6
