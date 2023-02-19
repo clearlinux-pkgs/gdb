@@ -6,11 +6,11 @@
 #
 %define keepstatic 1
 Name     : gdb
-Version  : 12.1
-Release  : 364
-URL      : https://mirrors.kernel.org/gnu/gdb/gdb-12.1.tar.xz
-Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-12.1.tar.xz
-Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-12.1.tar.xz.sig
+Version  : 13.1
+Release  : 365
+URL      : https://mirrors.kernel.org/gnu/gdb/gdb-13.1.tar.xz
+Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-13.1.tar.xz
+Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-13.1.tar.xz.sig
 Summary  : zlib compression library
 Group    : Development/Tools
 License  : BSL-1.0 GFDL-1.1 GPL-1.0+ GPL-2.0 GPL-2.0+ GPL-3.0 GPL-3.0+ LGPL-2.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0 Public-Domain
@@ -19,7 +19,6 @@ Requires: gdb-data = %{version}-%{release}
 Requires: gdb-info = %{version}-%{release}
 Requires: gdb-license = %{version}-%{release}
 Requires: gdb-man = %{version}-%{release}
-BuildRequires : SDL2-dev
 BuildRequires : babeltrace-dev
 BuildRequires : binutils-dev
 BuildRequires : bison
@@ -121,8 +120,8 @@ staticdev components for the gdb package.
 
 
 %prep
-%setup -q -n gdb-12.1
-cd %{_builddir}/gdb-12.1
+%setup -q -n gdb-13.1
+cd %{_builddir}/gdb-13.1
 
 %build
 ## build_prepend content
@@ -132,7 +131,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1676824830
+export SOURCE_DATE_EPOCH=1676835238
 unset LD_AS_NEEDED
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -156,7 +155,7 @@ PYTHON=/usr/bin/python3
 make  %{?_smp_mflags}  -O
 
 %install
-export SOURCE_DATE_EPOCH=1676824830
+export SOURCE_DATE_EPOCH=1676835238
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gdb
 cp %{_builddir}/gdb-%{version}/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1 || :
@@ -216,6 +215,7 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 /usr/share/gdb/python/gdb/command/type_printers.py
 /usr/share/gdb/python/gdb/command/unwinders.py
 /usr/share/gdb/python/gdb/command/xmethods.py
+/usr/share/gdb/python/gdb/disassembler.py
 /usr/share/gdb/python/gdb/frames.py
 /usr/share/gdb/python/gdb/function/__init__.py
 /usr/share/gdb/python/gdb/function/as_string.py
@@ -251,6 +251,8 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 %files dev
 %defattr(-,root,root,-)
 /usr/include/gdb/jit-reader.h
+/usr/include/sframe-api.h
+/usr/include/sframe.h
 /usr/lib64/libinproctrace.so
 
 %files info
@@ -265,6 +267,7 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 /usr/share/info/gdb.info-6
 /usr/share/info/gdb.info-7
 /usr/share/info/gdb.info-8
+/usr/share/info/sframe-spec.info
 /usr/share/info/stabs.info
 
 %files license
@@ -291,3 +294,4 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 /usr/lib64/libctf-nobfd.a
 /usr/lib64/libctf.a
 /usr/lib64/libopcodes.a
+/usr/lib64/libsframe.a

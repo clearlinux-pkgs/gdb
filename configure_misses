@@ -6,7 +6,6 @@ Configure miss: TIOCSTAT in sys/ioctl.h
 Configure miss: X
 Configure miss: aint
 Configure miss: anint
-Configure miss: bind in -lsocket
 Configure miss: compiler option needed when checking for declarations
 Configure miss: crtdefs.h
 Configure miss: cursesX.h
@@ -15,6 +14,8 @@ Configure miss: cursesX.h usability
 Configure miss: cygwin
 Configure miss: cygwin
 Configure miss: decfloat support in printf
+Configure miss: dsymutil
+Configure miss: dsymutil
 Configure miss: dtc
 Configure miss: dwz
 Configure miss: elf_hp.h
@@ -25,7 +26,8 @@ Configure miss: fpregset_t in sys/procfs.h
 Configure miss: fpregset_t in sys/procfs.h
 Configure miss: fpregset_t in sys/procfs.h
 Configure miss: gcc version with buggy 64-bit support
-Configure miss: gethostbyname in -lnsl
+Configure miss: gdc
+Configure miss: gdc
 Configure miss: gregset_t in sys/procfs.h
 Configure miss: gregset_t in sys/procfs.h
 Configure miss: gregset_t in sys/procfs.h
@@ -73,6 +75,8 @@ Configure miss: ncurses/term.h usability
 Configure miss: ncursesw/ncurses.h
 Configure miss: ncursesw/ncurses.h presence
 Configure miss: ncursesw/ncurses.h usability
+Configure miss: otool
+Configure miss: otool
 Configure miss: prgregset32_t in sys/procfs.h
 Configure miss: prgregset32_t in sys/procfs.h
 Configure miss: prgregset32_t in sys/procfs.h
@@ -150,11 +154,15 @@ Configure miss: varargs.h
 Configure miss: varargs.h presence
 Configure miss: varargs.h usability
 Configure miss: wcwidth broken with unicode combining characters
+Configure miss: whether ___lc_codepage_func is declared
+Configure miss: whether compiler driver understands Ada and is recent enough
+Configure miss: whether ctype.h defines __header_inline
 Configure miss: whether errno must be declared
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether or not strcoll and strcmp differ
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether sim frv should dump cpu state on unknown traps
+Configure miss: whether the D compiler works
 Configure miss: whether the compiler is clang
 Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the ctype macros accept non-ascii characters
@@ -163,8 +171,6 @@ Configure miss: whether to force sim alignment
 Configure miss: whether to force sim endianness
 Configure miss: whether to use xxhash
 Configure miss: win32_pstatus_t in sys/procfs.h
-Configure miss: windmc
-Configure miss: windmc
 Configure miss: windres
 Configure miss: windres
 Configure miss: ws2tcpip.h
@@ -175,8 +181,12 @@ Configure miss: ws2tcpip.h usability
 Configure miss: ws2tcpip.h usability
 Configure miss: x86_64-generic-linux-gnu-as
 Configure miss: x86_64-generic-linux-gnu-as
+Configure miss: x86_64-generic-linux-gnu-dsymutil
+Configure miss: x86_64-generic-linux-gnu-dsymutil
 Configure miss: x86_64-generic-linux-gnu-dtc
 Configure miss: x86_64-generic-linux-gnu-gccgo
+Configure miss: x86_64-generic-linux-gnu-gdc
+Configure miss: x86_64-generic-linux-gnu-gdc
 Configure miss: x86_64-generic-linux-gnu-gnatbind
 Configure miss: x86_64-generic-linux-gnu-gnatmake
 Configure miss: x86_64-generic-linux-gnu-ld
@@ -185,6 +195,8 @@ Configure miss: x86_64-generic-linux-gnu-lipo
 Configure miss: x86_64-generic-linux-gnu-lipo
 Configure miss: x86_64-generic-linux-gnu-objcopy
 Configure miss: x86_64-generic-linux-gnu-objcopy
+Configure miss: x86_64-generic-linux-gnu-otool
+Configure miss: x86_64-generic-linux-gnu-otool
 Configure miss: x86_64-generic-linux-gnu-readelf
 Configure miss: x86_64-generic-linux-gnu-readelf
 Configure miss: x86_64-generic-linux-gnu-windmc

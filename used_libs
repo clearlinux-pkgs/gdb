@@ -16,3 +16,4 @@ libsource-highlight.so.4
 libstdc++.so.6
 libtinfow.so.6
 libz.so.1
+libzstd.so.1
