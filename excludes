@@ -15,3 +15,5 @@
 /usr/include/ctf.h
 /usr/share/info/ctf-spec.info
 /usr/share/info/sframe-spec.info
+/usr/include/sframe-api.h
+/usr/include/sframe.h

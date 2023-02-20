@@ -7,7 +7,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 13.1
-Release  : 367
+Release  : 368
 URL      : https://mirrors.kernel.org/gnu/gdb/gdb-13.1.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-13.1.tar.xz
 Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-13.1.tar.xz.sig
@@ -131,7 +131,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1676836223
+export SOURCE_DATE_EPOCH=1676922216
 unset LD_AS_NEEDED
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -155,7 +155,7 @@ PYTHON=/usr/bin/python3
 make  %{?_smp_mflags}  -O
 
 %install
-export SOURCE_DATE_EPOCH=1676836223
+export SOURCE_DATE_EPOCH=1676922216
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gdb
 cp %{_builddir}/gdb-%{version}/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1 || :
@@ -188,6 +188,8 @@ rm -f %{buildroot}*/usr/include/ctf-api.h
 rm -f %{buildroot}*/usr/include/ctf.h
 rm -f %{buildroot}*/usr/share/info/ctf-spec.info
 rm -f %{buildroot}*/usr/share/info/sframe-spec.info
+rm -f %{buildroot}*/usr/include/sframe-api.h
+rm -f %{buildroot}*/usr/include/sframe.h
 ## install_append content
 rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/bfd.mo
 rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
@@ -252,8 +254,6 @@ rm -f %{buildroot}/usr/share/locale/*/LC_MESSAGES/opcodes.mo
 %files dev
 %defattr(-,root,root,-)
 /usr/include/gdb/jit-reader.h
-/usr/include/sframe-api.h
-/usr/include/sframe.h
 /usr/lib64/libinproctrace.so
 
 %files info
