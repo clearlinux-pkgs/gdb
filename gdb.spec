@@ -7,11 +7,11 @@
 #
 %define keepstatic 1
 Name     : gdb
-Version  : 13.1
-Release  : 379
-URL      : https://mirrors.kernel.org/gnu/gdb/gdb-13.1.tar.xz
-Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-13.1.tar.xz
-Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-13.1.tar.xz.sig
+Version  : 13.2
+Release  : 380
+URL      : https://mirrors.kernel.org/gnu/gdb/gdb-13.2.tar.xz
+Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-13.2.tar.xz
+Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-13.2.tar.xz.sig
 Summary  : zlib compression library
 Group    : Development/Tools
 License  : BSL-1.0 GFDL-1.1 GPL-1.0+ GPL-2.0 GPL-2.0+ GPL-3.0 GPL-3.0+ LGPL-2.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0 Public-Domain
@@ -121,10 +121,10 @@ staticdev components for the gdb package.
 
 
 %prep
-%setup -q -n gdb-13.1
-cd %{_builddir}/gdb-13.1
+%setup -q -n gdb-13.2
+cd %{_builddir}/gdb-13.2
 pushd ..
-cp -a gdb-13.1 buildavx2
+cp -a gdb-13.2 buildavx2
 popd
 
 %build
@@ -135,7 +135,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683675035
+export SOURCE_DATE_EPOCH=1685239232
 unset LD_AS_NEEDED
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -182,7 +182,7 @@ PYTHON=/usr/bin/python3
 make  %{?_smp_mflags}  -O
 popd
 %install
-export SOURCE_DATE_EPOCH=1683675035
+export SOURCE_DATE_EPOCH=1685239232
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gdb
 cp %{_builddir}/gdb-%{version}/COPYING %{buildroot}/usr/share/package-licenses/gdb/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1 || :

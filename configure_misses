@@ -1,203 +1,406 @@
 Configure miss: KERN_PROC
+Configure miss: KERN_PROC
+Configure miss: KERN_PROG_ARGS
 Configure miss: KERN_PROG_ARGS
 Configure miss: Mach-O support in BFD
+Configure miss: Mach-O support in BFD
+Configure miss: PT_GETDBREGS
 Configure miss: PT_GETDBREGS
 Configure miss: TIOCSTAT in sys/ioctl.h
+Configure miss: TIOCSTAT in sys/ioctl.h
+Configure miss: X
 Configure miss: X
 Configure miss: aint
+Configure miss: aint
+Configure miss: anint
 Configure miss: anint
 Configure miss: compiler option needed when checking for declarations
+Configure miss: compiler option needed when checking for declarations
+Configure miss: crtdefs.h
 Configure miss: crtdefs.h
 Configure miss: cursesX.h
+Configure miss: cursesX.h
 Configure miss: cursesX.h presence
+Configure miss: cursesX.h presence
+Configure miss: cursesX.h usability
 Configure miss: cursesX.h usability
 Configure miss: cygwin
 Configure miss: cygwin
+Configure miss: cygwin
+Configure miss: cygwin
+Configure miss: decfloat support in printf
 Configure miss: decfloat support in printf
 Configure miss: dsymutil
 Configure miss: dsymutil
+Configure miss: dsymutil
+Configure miss: dsymutil
+Configure miss: dtc
 Configure miss: dtc
 Configure miss: dwz
+Configure miss: dwz
+Configure miss: elf_hp.h
 Configure miss: elf_hp.h
 Configure miss: elf_hp.h presence
+Configure miss: elf_hp.h presence
 Configure miss: elf_hp.h usability
+Configure miss: elf_hp.h usability
+Configure miss: fls
 Configure miss: fls
 Configure miss: fpregset_t in sys/procfs.h
 Configure miss: fpregset_t in sys/procfs.h
 Configure miss: fpregset_t in sys/procfs.h
+Configure miss: fpregset_t in sys/procfs.h
+Configure miss: fpregset_t in sys/procfs.h
+Configure miss: fpregset_t in sys/procfs.h
+Configure miss: gcc version with buggy 64-bit support
 Configure miss: gcc version with buggy 64-bit support
 Configure miss: gdc
 Configure miss: gdc
+Configure miss: gdc
+Configure miss: gdc
+Configure miss: gregset_t in sys/procfs.h
+Configure miss: gregset_t in sys/procfs.h
+Configure miss: gregset_t in sys/procfs.h
 Configure miss: gregset_t in sys/procfs.h
 Configure miss: gregset_t in sys/procfs.h
 Configure miss: gregset_t in sys/procfs.h
 Configure miss: if building for x32
+Configure miss: if building for x32
 Configure miss: if signal handlers must be reinstalled when invoked
+Configure miss: if signal handlers must be reinstalled when invoked
+Configure miss: isl 0.15 or later
 Configure miss: isl 0.15 or later
 Configure miss: kinfo_getfile
 Configure miss: kinfo_getfile
 Configure miss: kinfo_getfile
+Configure miss: kinfo_getfile
+Configure miss: kinfo_getfile
+Configure miss: kinfo_getfile
+Configure miss: libaudit.h
 Configure miss: libaudit.h
 Configure miss: libaudit.h presence
+Configure miss: libaudit.h presence
+Configure miss: libaudit.h usability
 Configure miss: libaudit.h usability
 Configure miss: libdebuginfod >= 0.179
+Configure miss: libdebuginfod >= 0.179
+Configure miss: libiconvlist
 Configure miss: libiconvlist
 Configure miss: library containing kinfo_getfile
 Configure miss: library containing kinfo_getfile
 Configure miss: library containing kinfo_getfile
+Configure miss: library containing kinfo_getfile
+Configure miss: library containing kinfo_getfile
+Configure miss: library containing kinfo_getfile
+Configure miss: libunwind-ia64.h
 Configure miss: libunwind-ia64.h
 Configure miss: libunwind-ia64.h presence
+Configure miss: libunwind-ia64.h presence
+Configure miss: libunwind-ia64.h usability
 Configure miss: libunwind-ia64.h usability
 Configure miss: libxxhash
+Configure miss: libxxhash
+Configure miss: lwpstatus_t in sys/procfs.h
 Configure miss: lwpstatus_t in sys/procfs.h
 Configure miss: lwpstatus_t.pr_context in sys/procfs.h
+Configure miss: lwpstatus_t.pr_context in sys/procfs.h
+Configure miss: lwpstatus_t.pr_fpreg in sys/procfs.h
 Configure miss: lwpstatus_t.pr_fpreg in sys/procfs.h
 Configure miss: lwpstatus_t.pr_reg in sys/procfs.h
+Configure miss: lwpstatus_t.pr_reg in sys/procfs.h
+Configure miss: lwpxstatus_t in sys/procfs.h
 Configure miss: lwpxstatus_t in sys/procfs.h
 Configure miss: mach-o/dyld.h
+Configure miss: mach-o/dyld.h
+Configure miss: mach-o/dyld.h presence
 Configure miss: mach-o/dyld.h presence
 Configure miss: mach-o/dyld.h usability
+Configure miss: mach-o/dyld.h usability
+Configure miss: machine/reg.h
 Configure miss: machine/reg.h
 Configure miss: machine/reg.h presence
+Configure miss: machine/reg.h presence
+Configure miss: machine/reg.h usability
 Configure miss: machine/reg.h usability
 Configure miss: mbscasecmp
+Configure miss: mbscasecmp
+Configure miss: mbschr
 Configure miss: mbschr
 Configure miss: mbscmp
+Configure miss: mbscmp
+Configure miss: mbstr.h
 Configure miss: mbstr.h
 Configure miss: mbstr.h presence
+Configure miss: mbstr.h presence
+Configure miss: mbstr.h usability
 Configure miss: mbstr.h usability
 Configure miss: ncurses/ncurses.h
+Configure miss: ncurses/ncurses.h
+Configure miss: ncurses/ncurses.h presence
 Configure miss: ncurses/ncurses.h presence
 Configure miss: ncurses/ncurses.h usability
+Configure miss: ncurses/ncurses.h usability
+Configure miss: ncurses/term.h
 Configure miss: ncurses/term.h
 Configure miss: ncurses/term.h presence
+Configure miss: ncurses/term.h presence
+Configure miss: ncurses/term.h usability
 Configure miss: ncurses/term.h usability
 Configure miss: ncursesw/ncurses.h
+Configure miss: ncursesw/ncurses.h
 Configure miss: ncursesw/ncurses.h presence
+Configure miss: ncursesw/ncurses.h presence
+Configure miss: ncursesw/ncurses.h usability
 Configure miss: ncursesw/ncurses.h usability
 Configure miss: otool
 Configure miss: otool
+Configure miss: otool
+Configure miss: otool
+Configure miss: prgregset32_t in sys/procfs.h
+Configure miss: prgregset32_t in sys/procfs.h
+Configure miss: prgregset32_t in sys/procfs.h
 Configure miss: prgregset32_t in sys/procfs.h
 Configure miss: prgregset32_t in sys/procfs.h
 Configure miss: prgregset32_t in sys/procfs.h
 Configure miss: prpsinfo32_t in sys/procfs.h
+Configure miss: prpsinfo32_t in sys/procfs.h
+Configure miss: prpsinfo32_t.pr_pid in sys/procfs.h
 Configure miss: prpsinfo32_t.pr_pid in sys/procfs.h
 Configure miss: prstatus32_t in sys/procfs.h
+Configure miss: prstatus32_t in sys/procfs.h
+Configure miss: prstatus32_t.pr_who in sys/procfs.h
 Configure miss: prstatus32_t.pr_who in sys/procfs.h
 Configure miss: prstatus_t.pr_who in sys/procfs.h
+Configure miss: prstatus_t.pr_who in sys/procfs.h
+Configure miss: psinfo32_t in sys/procfs.h
 Configure miss: psinfo32_t in sys/procfs.h
 Configure miss: psinfo32_t.pr_pid in sys/procfs.h
+Configure miss: psinfo32_t.pr_pid in sys/procfs.h
+Configure miss: psinfo_t in sys/procfs.h
 Configure miss: psinfo_t in sys/procfs.h
 Configure miss: psinfo_t.pr_pid in sys/procfs.h
+Configure miss: psinfo_t.pr_pid in sys/procfs.h
+Configure miss: pstat_getstatic
 Configure miss: pstat_getstatic
 Configure miss: pstatus32_t in sys/procfs.h
+Configure miss: pstatus32_t in sys/procfs.h
+Configure miss: pstatus_t in sys/procfs.h
 Configure miss: pstatus_t in sys/procfs.h
 Configure miss: ptrace.h
 Configure miss: ptrace.h
 Configure miss: ptrace.h
+Configure miss: ptrace.h
+Configure miss: ptrace.h
+Configure miss: ptrace.h
+Configure miss: ptrace.h presence
+Configure miss: ptrace.h presence
+Configure miss: ptrace.h presence
 Configure miss: ptrace.h presence
 Configure miss: ptrace.h presence
 Configure miss: ptrace.h presence
 Configure miss: ptrace.h usability
 Configure miss: ptrace.h usability
 Configure miss: ptrace.h usability
+Configure miss: ptrace.h usability
+Configure miss: ptrace.h usability
+Configure miss: ptrace.h usability
+Configure miss: ptrace64
+Configure miss: ptrace64
+Configure miss: ptrace64
 Configure miss: ptrace64
 Configure miss: ptrace64
 Configure miss: ptrace64
 Configure miss: pxstatus_t in sys/procfs.h
+Configure miss: pxstatus_t in sys/procfs.h
+Configure miss: spawnvpe
 Configure miss: spawnvpe
 Configure miss: speed_t in sys/types.h
+Configure miss: speed_t in sys/types.h
+Configure miss: sqrt
 Configure miss: sqrt
 Configure miss: strerror_r with POSIX signature
+Configure miss: strerror_r with POSIX signature
+Configure miss: struct lwp
 Configure miss: struct lwp
 Configure miss: struct pt_insn.enabled
 Configure miss: struct pt_insn.enabled
 Configure miss: struct pt_insn.enabled
+Configure miss: struct pt_insn.enabled
+Configure miss: struct pt_insn.enabled
+Configure miss: struct pt_insn.enabled
+Configure miss: struct pt_insn.resynced
+Configure miss: struct pt_insn.resynced
+Configure miss: struct pt_insn.resynced
 Configure miss: struct pt_insn.resynced
 Configure miss: struct pt_insn.resynced
 Configure miss: struct pt_insn.resynced
 Configure miss: struct ptrace_lwpinfo.pl_syscall_code
+Configure miss: struct ptrace_lwpinfo.pl_syscall_code
+Configure miss: struct ptrace_lwpinfo.pl_tdname
 Configure miss: struct ptrace_lwpinfo.pl_tdname
 Configure miss: struct reg in machine/reg.h
+Configure miss: struct reg in machine/reg.h
+Configure miss: struct reg.r_fs
 Configure miss: struct reg.r_fs
 Configure miss: struct reg.r_gs
+Configure miss: struct reg.r_gs
+Configure miss: struct thread.td_pcb
 Configure miss: struct thread.td_pcb
 Configure miss: sys/ldr.h
+Configure miss: sys/ldr.h
+Configure miss: sys/ldr.h presence
 Configure miss: sys/ldr.h presence
 Configure miss: sys/ldr.h usability
+Configure miss: sys/ldr.h usability
+Configure miss: sys/procctl.h
 Configure miss: sys/procctl.h
 Configure miss: sys/procctl.h presence
+Configure miss: sys/procctl.h presence
+Configure miss: sys/procctl.h usability
 Configure miss: sys/procctl.h usability
 Configure miss: sys/pte.h
+Configure miss: sys/pte.h
+Configure miss: sys/pte.h presence
 Configure miss: sys/pte.h presence
 Configure miss: sys/pte.h usability
+Configure miss: sys/pte.h usability
+Configure miss: sys/ptem.h
 Configure miss: sys/ptem.h
 Configure miss: sys/stream.h
+Configure miss: sys/stream.h
+Configure miss: sys/stream.h presence
 Configure miss: sys/stream.h presence
 Configure miss: sys/stream.h usability
+Configure miss: sys/stream.h usability
+Configure miss: sys/sysctl.h
 Configure miss: sys/sysctl.h
 Configure miss: sys/sysmp.h
+Configure miss: sys/sysmp.h
+Configure miss: sys/systemcfg.h
 Configure miss: sys/systemcfg.h
 Configure miss: sys/table.h
+Configure miss: sys/table.h
+Configure miss: sys/termio.h
 Configure miss: sys/termio.h
 Configure miss: sys_errlist
+Configure miss: sys_errlist
+Configure miss: sys_nerr
 Configure miss: sys_nerr
 Configure miss: sys_siglist
+Configure miss: sys_siglist
+Configure miss: sysctl
 Configure miss: sysctl
 Configure miss: sysmp
+Configure miss: sysmp
+Configure miss: tgetent
 Configure miss: tgetent
 Configure miss: tgetent in -ltermcap
+Configure miss: tgetent in -ltermcap
+Configure miss: ttrace
 Configure miss: ttrace
 Configure miss: usable guile from /usr/bin/pkg-config
+Configure miss: usable guile from /usr/bin/pkg-config
+Configure miss: ust
 Configure miss: ust
 Configure miss: varargs.h
+Configure miss: varargs.h
+Configure miss: varargs.h presence
 Configure miss: varargs.h presence
 Configure miss: varargs.h usability
+Configure miss: varargs.h usability
+Configure miss: wcwidth broken with unicode combining characters
 Configure miss: wcwidth broken with unicode combining characters
 Configure miss: whether ___lc_codepage_func is declared
+Configure miss: whether ___lc_codepage_func is declared
+Configure miss: whether compiler driver understands Ada and is recent enough
 Configure miss: whether compiler driver understands Ada and is recent enough
 Configure miss: whether ctype.h defines __header_inline
+Configure miss: whether ctype.h defines __header_inline
+Configure miss: whether errno must be declared
 Configure miss: whether errno must be declared
 Configure miss: whether mbrtowc stores incomplete characters
+Configure miss: whether mbrtowc stores incomplete characters
+Configure miss: whether or not strcoll and strcmp differ
 Configure miss: whether or not strcoll and strcmp differ
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
+Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
+Configure miss: whether sim frv should dump cpu state on unknown traps
 Configure miss: whether sim frv should dump cpu state on unknown traps
 Configure miss: whether the D compiler works
+Configure miss: whether the D compiler works
+Configure miss: whether the compiler is clang
 Configure miss: whether the compiler is clang
 Configure miss: whether the compiler produces multi-arch binaries
+Configure miss: whether the compiler produces multi-arch binaries
+Configure miss: whether the ctype macros accept non-ascii characters
 Configure miss: whether the ctype macros accept non-ascii characters
 Configure miss: whether this system supports file names of any length
+Configure miss: whether this system supports file names of any length
+Configure miss: whether to force sim alignment
 Configure miss: whether to force sim alignment
 Configure miss: whether to force sim endianness
+Configure miss: whether to force sim endianness
 Configure miss: whether to use xxhash
+Configure miss: whether to use xxhash
+Configure miss: win32_pstatus_t in sys/procfs.h
 Configure miss: win32_pstatus_t in sys/procfs.h
 Configure miss: windres
 Configure miss: windres
+Configure miss: windres
+Configure miss: windres
+Configure miss: ws2tcpip.h
+Configure miss: ws2tcpip.h
 Configure miss: ws2tcpip.h
 Configure miss: ws2tcpip.h
 Configure miss: ws2tcpip.h presence
 Configure miss: ws2tcpip.h presence
+Configure miss: ws2tcpip.h presence
+Configure miss: ws2tcpip.h presence
+Configure miss: ws2tcpip.h usability
+Configure miss: ws2tcpip.h usability
 Configure miss: ws2tcpip.h usability
 Configure miss: ws2tcpip.h usability
 Configure miss: x86_64-generic-linux-gnu-as
 Configure miss: x86_64-generic-linux-gnu-as
+Configure miss: x86_64-generic-linux-gnu-as
+Configure miss: x86_64-generic-linux-gnu-as
+Configure miss: x86_64-generic-linux-gnu-dsymutil
+Configure miss: x86_64-generic-linux-gnu-dsymutil
 Configure miss: x86_64-generic-linux-gnu-dsymutil
 Configure miss: x86_64-generic-linux-gnu-dsymutil
 Configure miss: x86_64-generic-linux-gnu-dtc
+Configure miss: x86_64-generic-linux-gnu-dtc
+Configure miss: x86_64-generic-linux-gnu-gccgo
 Configure miss: x86_64-generic-linux-gnu-gccgo
 Configure miss: x86_64-generic-linux-gnu-gdc
 Configure miss: x86_64-generic-linux-gnu-gdc
+Configure miss: x86_64-generic-linux-gnu-gdc
+Configure miss: x86_64-generic-linux-gnu-gdc
 Configure miss: x86_64-generic-linux-gnu-gnatbind
+Configure miss: x86_64-generic-linux-gnu-gnatbind
+Configure miss: x86_64-generic-linux-gnu-gnatmake
 Configure miss: x86_64-generic-linux-gnu-gnatmake
 Configure miss: x86_64-generic-linux-gnu-ld
 Configure miss: x86_64-generic-linux-gnu-ld
+Configure miss: x86_64-generic-linux-gnu-ld
+Configure miss: x86_64-generic-linux-gnu-ld
+Configure miss: x86_64-generic-linux-gnu-lipo
+Configure miss: x86_64-generic-linux-gnu-lipo
 Configure miss: x86_64-generic-linux-gnu-lipo
 Configure miss: x86_64-generic-linux-gnu-lipo
 Configure miss: x86_64-generic-linux-gnu-objcopy
 Configure miss: x86_64-generic-linux-gnu-objcopy
+Configure miss: x86_64-generic-linux-gnu-objcopy
+Configure miss: x86_64-generic-linux-gnu-objcopy
+Configure miss: x86_64-generic-linux-gnu-otool
+Configure miss: x86_64-generic-linux-gnu-otool
 Configure miss: x86_64-generic-linux-gnu-otool
 Configure miss: x86_64-generic-linux-gnu-otool
 Configure miss: x86_64-generic-linux-gnu-readelf
 Configure miss: x86_64-generic-linux-gnu-readelf
+Configure miss: x86_64-generic-linux-gnu-readelf
+Configure miss: x86_64-generic-linux-gnu-readelf
+Configure miss: x86_64-generic-linux-gnu-windmc
+Configure miss: x86_64-generic-linux-gnu-windmc
 Configure miss: x86_64-generic-linux-gnu-windmc
 Configure miss: x86_64-generic-linux-gnu-windmc
