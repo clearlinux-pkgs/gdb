@@ -129,7 +129,7 @@ popd
 
 %build
 ## build_prepend content
-export LDFLAGS="-Wl,--whole-archive /usr/lib64/libpython3.11.so -Wl,--no-whole-archive"
+export LDFLAGS="-Wl,--whole-archive /usr/lib64/libpython3.12.so -Wl,--no-whole-archive"
 ## build_prepend end
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
