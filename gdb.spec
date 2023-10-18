@@ -161,7 +161,7 @@ make  %{?_smp_mflags}  -O
 unset PKG_CONFIG_PATH
 pushd ../buildavx2/
 ## build_prepend content
-export LDFLAGS="-Wl,--whole-archive /usr/lib64/libpython3.11.so -Wl,--no-whole-archive"
+export LDFLAGS="-Wl,--whole-archive /usr/lib64/libpython3.12.so -Wl,--no-whole-archive"
 ## build_prepend end
 export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3"
 export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3"
