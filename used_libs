@@ -11,7 +11,7 @@ liblzma.so.5
 libm.so.6
 libmpfr.so.6
 libncursesw.so.6
-libpython3.11.so.1.0
+libpython3.12.so.1.0
 libsource-highlight.so.4
 libstdc++.so.6
 libz.so.1

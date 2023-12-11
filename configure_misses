@@ -58,6 +58,8 @@ Configure miss: gdc
 Configure miss: gdc
 Configure miss: gdc
 Configure miss: gdc
+Configure miss: gm2
+Configure miss: gm2
 Configure miss: gregset_t in sys/procfs.h
 Configure miss: gregset_t in sys/procfs.h
 Configure miss: gregset_t in sys/procfs.h
@@ -68,6 +70,8 @@ Configure miss: if building for x32
 Configure miss: if building for x32
 Configure miss: if signal handlers must be reinstalled when invoked
 Configure miss: if signal handlers must be reinstalled when invoked
+Configure miss: if using Solaris linker
+Configure miss: if using Solaris linker
 Configure miss: isl 0.15 or later
 Configure miss: isl 0.15 or later
 Configure miss: kinfo_getfile
@@ -84,6 +88,8 @@ Configure miss: libaudit.h usability
 Configure miss: libaudit.h usability
 Configure miss: libdebuginfod >= 0.179
 Configure miss: libdebuginfod >= 0.179
+Configure miss: libdebuginfod >= 0.188
+Configure miss: libdebuginfod >= 0.188
 Configure miss: libiconvlist
 Configure miss: libiconvlist
 Configure miss: library containing kinfo_getfile
@@ -98,6 +104,10 @@ Configure miss: libunwind-ia64.h presence
 Configure miss: libunwind-ia64.h presence
 Configure miss: libunwind-ia64.h usability
 Configure miss: libunwind-ia64.h usability
+Configure miss: libxxhash
+Configure miss: libxxhash
+Configure miss: libxxhash
+Configure miss: libxxhash
 Configure miss: libxxhash
 Configure miss: libxxhash
 Configure miss: lwpstatus_t in sys/procfs.h
@@ -134,6 +144,8 @@ Configure miss: mbstr.h presence
 Configure miss: mbstr.h presence
 Configure miss: mbstr.h usability
 Configure miss: mbstr.h usability
+Configure miss: mips subtarget
+Configure miss: mips subtarget
 Configure miss: ncurses/ncurses.h
 Configure miss: ncurses/ncurses.h
 Configure miss: ncurses/ncurses.h presence
@@ -312,6 +324,7 @@ Configure miss: wcwidth broken with unicode combining characters
 Configure miss: wcwidth broken with unicode combining characters
 Configure miss: whether ___lc_codepage_func is declared
 Configure miss: whether ___lc_codepage_func is declared
+Configure miss: whether a statically linked program can dlopen itself
 Configure miss: whether compiler driver understands Ada and is recent enough
 Configure miss: whether compiler driver understands Ada and is recent enough
 Configure miss: whether ctype.h defines __header_inline
@@ -340,6 +353,10 @@ Configure miss: whether to force sim alignment
 Configure miss: whether to force sim alignment
 Configure miss: whether to force sim endianness
 Configure miss: whether to force sim endianness
+Configure miss: whether to use xxhash
+Configure miss: whether to use xxhash
+Configure miss: whether to use xxhash
+Configure miss: whether to use xxhash
 Configure miss: whether to use xxhash
 Configure miss: whether to use xxhash
 Configure miss: win32_pstatus_t in sys/procfs.h
@@ -376,6 +393,8 @@ Configure miss: x86_64-generic-linux-gnu-gdc
 Configure miss: x86_64-generic-linux-gnu-gdc
 Configure miss: x86_64-generic-linux-gnu-gdc
 Configure miss: x86_64-generic-linux-gnu-gdc
+Configure miss: x86_64-generic-linux-gnu-gm2
+Configure miss: x86_64-generic-linux-gnu-gm2
 Configure miss: x86_64-generic-linux-gnu-gnatbind
 Configure miss: x86_64-generic-linux-gnu-gnatbind
 Configure miss: x86_64-generic-linux-gnu-gnatmake

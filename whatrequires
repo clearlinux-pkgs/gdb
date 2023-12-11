@@ -3,5 +3,6 @@ compat-libpng-soname12
 libpng
 libreoffice
 pypi-cython
+qt6base
 samba
 shadow
