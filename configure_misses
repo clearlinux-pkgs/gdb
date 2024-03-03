@@ -325,6 +325,7 @@ Configure miss: wcwidth broken with unicode combining characters
 Configure miss: whether ___lc_codepage_func is declared
 Configure miss: whether ___lc_codepage_func is declared
 Configure miss: whether a statically linked program can dlopen itself
+Configure miss: whether a statically linked program can dlopen itself
 Configure miss: whether compiler driver understands Ada and is recent enough
 Configure miss: whether compiler driver understands Ada and is recent enough
 Configure miss: whether ctype.h defines __header_inline
