@@ -92,6 +92,8 @@ Configure miss: libdebuginfod >= 0.188
 Configure miss: libdebuginfod >= 0.188
 Configure miss: libiconvlist
 Configure miss: libiconvlist
+Configure miss: liblzma
+Configure miss: liblzma
 Configure miss: library containing kinfo_getfile
 Configure miss: library containing kinfo_getfile
 Configure miss: library containing kinfo_getfile
@@ -120,6 +122,8 @@ Configure miss: lwpstatus_t.pr_reg in sys/procfs.h
 Configure miss: lwpstatus_t.pr_reg in sys/procfs.h
 Configure miss: lwpxstatus_t in sys/procfs.h
 Configure miss: lwpxstatus_t in sys/procfs.h
+Configure miss: lzma_auto_decoder in -llzma
+Configure miss: lzma_auto_decoder in -llzma
 Configure miss: mach-o/dyld.h
 Configure miss: mach-o/dyld.h
 Configure miss: mach-o/dyld.h presence
