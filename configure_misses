@@ -1,3 +1,15 @@
+Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: CFLocaleCopyPreferredLanguages
 Configure miss: KERN_PROC
 Configure miss: KERN_PROC
 Configure miss: KERN_PROG_ARGS
@@ -70,6 +82,8 @@ Configure miss: if building for x32
 Configure miss: if building for x32
 Configure miss: if signal handlers must be reinstalled when invoked
 Configure miss: if signal handlers must be reinstalled when invoked
+Configure miss: if union semun defined
+Configure miss: if union semun defined
 Configure miss: if using Solaris linker
 Configure miss: if using Solaris linker
 Configure miss: isl 0.15 or later
@@ -268,6 +282,12 @@ Configure miss: sys/ldr.h presence
 Configure miss: sys/ldr.h presence
 Configure miss: sys/ldr.h usability
 Configure miss: sys/ldr.h usability
+Configure miss: sys/link.h
+Configure miss: sys/link.h
+Configure miss: sys/link.h presence
+Configure miss: sys/link.h presence
+Configure miss: sys/link.h usability
+Configure miss: sys/link.h usability
 Configure miss: sys/procctl.h
 Configure miss: sys/procctl.h
 Configure miss: sys/procctl.h presence
@@ -328,8 +348,12 @@ Configure miss: wcwidth broken with unicode combining characters
 Configure miss: wcwidth broken with unicode combining characters
 Configure miss: whether ___lc_codepage_func is declared
 Configure miss: whether ___lc_codepage_func is declared
+Configure miss: whether _pgmptr is declared
+Configure miss: whether _pgmptr is declared
 Configure miss: whether a statically linked program can dlopen itself
 Configure miss: whether a statically linked program can dlopen itself
+Configure miss: whether basename is declared
+Configure miss: whether basename is declared
 Configure miss: whether compiler driver understands Ada and is recent enough
 Configure miss: whether compiler driver understands Ada and is recent enough
 Configure miss: whether ctype.h defines __header_inline
@@ -344,6 +368,8 @@ Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether sim frv should dump cpu state on unknown traps
 Configure miss: whether sim frv should dump cpu state on unknown traps
+Configure miss: whether strverscmp is declared
+Configure miss: whether strverscmp is declared
 Configure miss: whether the D compiler works
 Configure miss: whether the D compiler works
 Configure miss: whether the compiler is clang

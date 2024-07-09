@@ -1,4 +1,5 @@
-14.2
+15.1
+SDL2-dev
 gfortran
 glibc-locale
 libxslt-bin
