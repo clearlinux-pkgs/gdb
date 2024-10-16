@@ -10,7 +10,7 @@
 %define keepstatic 1
 Name     : gdb
 Version  : 15.2
-Release  : 398
+Release  : 399
 URL      : https://mirrors.kernel.org/gnu/gdb/gdb-15.2.tar.gz
 Source0  : https://mirrors.kernel.org/gnu/gdb/gdb-15.2.tar.gz
 Source1  : https://mirrors.kernel.org/gnu/gdb/gdb-15.2.tar.gz.sig
