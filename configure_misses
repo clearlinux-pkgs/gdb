@@ -50,12 +50,6 @@ Configure miss: dtc
 Configure miss: dtc
 Configure miss: dwz
 Configure miss: dwz
-Configure miss: elf_hp.h
-Configure miss: elf_hp.h
-Configure miss: elf_hp.h presence
-Configure miss: elf_hp.h presence
-Configure miss: elf_hp.h usability
-Configure miss: elf_hp.h usability
 Configure miss: fls
 Configure miss: fls
 Configure miss: fpregset_t in sys/procfs.h
@@ -376,10 +370,10 @@ Configure miss: whether the compiler is clang
 Configure miss: whether the compiler is clang
 Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the compiler produces multi-arch binaries
-Configure miss: whether the ctype macros accept non-ascii characters
-Configure miss: whether the ctype macros accept non-ascii characters
 Configure miss: whether this system supports file names of any length
 Configure miss: whether this system supports file names of any length
+Configure miss: whether to enable libdiagnostics
+Configure miss: whether to enable libdiagnostics
 Configure miss: whether to force sim alignment
 Configure miss: whether to force sim alignment
 Configure miss: whether to force sim endianness

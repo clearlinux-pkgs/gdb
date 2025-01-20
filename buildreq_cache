@@ -1,5 +1,7 @@
-15.2
+16.1
 SDL2-dev
 gfortran
 glibc-locale
 libxslt-bin
+rustc
+valgrind

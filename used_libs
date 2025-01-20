@@ -1,17 +1,5 @@
 ld-linux-x86-64.so.2
-libbabeltrace-ctf.so.1
-libbabeltrace.so.1
-libboost_regex.so.1.83.0
 libc.so.6
-libexpat.so.1
 libgcc_s.so.1
-libgmp.so.10
-libipt.so.2
 libm.so.6
-libmpfr.so.6
-libncursesw.so.6
-libpython3.13.so.1.0
-libsource-highlight.so.4
 libstdc++.so.6
-libz.so.1
-libzstd.so.1
